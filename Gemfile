@@ -23,6 +23,11 @@ gem 'foundation-rails'
 
 gem 'devise'
 gem 'simple_form'
+gem 'dotenv'
+
+group :test do
+  gem 'coveralls', require: false
+end
 
 group :development, :test do
   gem 'pry-rails'
