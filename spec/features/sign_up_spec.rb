@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'user signs up', %Q{
+feature 'user signs up', %{
 As an unregistered user
 I want to be able to create an account
 So I can gain access to the app
