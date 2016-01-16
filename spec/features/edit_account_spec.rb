@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'update user profile', %Q{
+feature 'update user profile', %{
 As an authenticated user
 I want to view my account information
 So that I may change it
@@ -12,7 +12,6 @@ So that I may change it
   # [ ] I want to be able to add my Wunderlist login at any time
   # [X] I want to be able to edit my name
 
-
   let!(:user) { FactoryGirl.create(:user) }
 
   context 'updating profile' do
@@ -20,7 +19,6 @@ So that I may change it
       visit root_path
       sign_in_as(user)
       click_link 'Edit Account Details'
-      save_and_open_page
     end
 
     scenario "user successfully edits name, email and password" do
