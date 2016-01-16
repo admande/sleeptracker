@@ -7,13 +7,13 @@ So I can gain access to the app
 } do
 
 # Acceptance Criteria:
-# [X] There is an option to register if I do not have an account
 # [x] If I am not registered, I can see the welcome page
+# [X] There is an option to register if I do not have an account
 # [X] I must provide a valid email address
 # [X] I must confirm my password
 # [X] My password is not displayed as I enter it
-# [ ] If my email is already registered, I cannot reregister and will receive an error message
 # [X] If registration is successful, I am presented with a message and will automatically be signed in and gain access to the system
+# [X] If my email is already registered, I cannot reregister and will receive an error message
 
   context 'signing up' do
     before do
