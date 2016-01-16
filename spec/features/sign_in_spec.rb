@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'user signs in', %Q{
+feature 'user signs in', %{
 As an unauthenticated user
 I want to be able to sign in
 So that I can gain access to the app
