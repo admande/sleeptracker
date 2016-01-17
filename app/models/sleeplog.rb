@@ -4,5 +4,4 @@ class Sleeplog < ActiveRecord::Base
   validates :user_id, presence: true, numericality: { only_integer: true }
   validates :date, presence: true
   validates :hours, presence: true
-
 end
