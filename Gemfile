@@ -24,6 +24,12 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'dotenv'
+gem 'haml-rails'
+
+#helping creating charts for sleeplog
+gem 'chartkick'
+gem 'groupdate'
+gem 'active_median'
 
 group :test do
   gem 'coveralls', require: false
@@ -38,6 +44,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
+  gem 'faker'
 end
 
 group :development do

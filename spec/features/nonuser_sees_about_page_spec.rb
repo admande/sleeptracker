@@ -7,9 +7,7 @@ feature 'unauthenticated user visits website', %{
 } do
 
 # Acceptance Criteria:
-# [ ] I can see information about how the app works on the home page
-# [ ] I can register for an account from the homepage
-# [ ] I can see information on the science behind the app on the Research page
+# [X] I can see information on the science behind the app on the Research page
 
   scenario 'unauthenticated user can access about page' do
     visit about_path

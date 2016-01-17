@@ -5,4 +5,10 @@ FactoryGirl.define do
     email 'kyle.tavers@gmail.com'
     password 'password!'
   end
+
+  factory :sleeplog do
+    user
+    sequence(:date) { |i| "2016-01-#{i}" }
+    hours { rand(1..10) }
+  end
 end

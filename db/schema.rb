@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160111024801) do
+ActiveRecord::Schema.define(version: 20160117000012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sleeplogs", force: :cascade do |t|
+    t.integer "user_id",          null: false
+    t.date    "date",             null: false
+    t.integer "hours",            null: false
+    t.string  "quality"
+    t.text    "notes"
+    t.time    "in_bed_time"
+    t.time    "fall_asleep_time"
+    t.time    "wake_up_time"
+    t.integer "diary_id"
+    t.boolean "sleeping_pill"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",             default: "", null: false
