@@ -7,7 +7,7 @@ feature 'user signs in', %{
 } do
 
 # Acceptance Criteria:
-# [ ] I can navigate to my sleep log from any page
+# [X] I can navigate to my sleep log from any page
 # [ ] I can choose to see a display of sleep gotten over the last week, month, or year
 # [ ] I can see my mood from the night before (based on the diary log), to see if my mood affected my sleep
 
@@ -16,9 +16,9 @@ feature 'user signs in', %{
 
   context 'seeing sleeplogs' do
     before do
+      visit root_path
       sign_in_as(user)
-      visit sleeplogs_path
-      save_and_open_page
+      click_link "Sleeplogs"
     end
 
     scenario "user sees sleeplogs" do
