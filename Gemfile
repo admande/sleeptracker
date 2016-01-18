@@ -45,6 +45,7 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
   gem 'faker'
+  gem 'selenium-webdriver'
 end
 
 group :development do
