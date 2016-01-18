@@ -1,14 +1,15 @@
 class SleeplogsController < ApplicationController
   before_action :authenticate_user!
-  respond_to :html, :js
+  respond_to :js
+  respond_to :html
 
   def index
     @user = current_user
     @sleeplogs = Sleeplog.where(user: @user).order(date: :desc)
 
     respond_to do |format|
+      format.js
       format.html
-      format.json
     end
   end
 

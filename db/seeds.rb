@@ -22,3 +22,19 @@ Sleeplog.create(
   hours: "7",
   user_id: user.id
 )
+
+Todo.create(
+  title: "Sign up Billy for daycare",
+  user_id: user.id
+)
+Todo.create(
+  due: "2016-02-15",
+  title: "Water lawn",
+  user_id: user.id
+)
+
+Todo.create(
+  due: "2016-04-15",
+  title: "File taxes",
+  user_id: user.id
+)
