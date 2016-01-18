@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160117000012) do
+ActiveRecord::Schema.define(version: 20160118183745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20160117000012) do
     t.time    "wake_up_time"
     t.integer "diary_id"
     t.boolean "sleeping_pill"
+  end
+
+  create_table "todos", force: :cascade do |t|
+    t.string  "title",     null: false
+    t.integer "user_id",   null: false
+    t.date    "due"
+    t.boolean "completed"
+    t.boolean "starred"
   end
 
   create_table "users", force: :cascade do |t|
