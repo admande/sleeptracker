@@ -33,6 +33,8 @@ gem 'active_median'
 
 group :test do
   gem 'coveralls', require: false
+  gem 'poltergeist'
+  gem 'phantomjs'
 end
 
 group :development, :test do
