@@ -34,7 +34,7 @@ gem 'active_median'
 group :test do
   gem 'coveralls', require: false
   gem 'poltergeist'
-  gem 'phantomjs'
+  gem 'database_cleaner'
 end
 
 group :development, :test do
