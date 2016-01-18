@@ -30,7 +30,6 @@ context 'signing in' do
       click_link "Sleeplogs"
       click_link "Show Sleeplogs"
       expect(page).to have_content("2016-01-30")
-      expect(page).to have_content("Hours 50")
     end
   end
 end
