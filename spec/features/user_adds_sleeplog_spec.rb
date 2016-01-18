@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'user adds sleeplog', %{
   As an authenticated user
@@ -23,7 +23,6 @@ feature 'user adds sleeplog', %{
 
       click_link "Sleeplogs"
       click_link "Add Sleeplog"
-      sleep(5)
       select "January", from: "sleeplog_date_2i"
       select "30", from: "sleeplog_date_3i"
       find(:xpath, "//input[@id='sleeplog_hours']").set 4

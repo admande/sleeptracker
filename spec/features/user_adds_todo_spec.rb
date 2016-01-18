@@ -20,17 +20,15 @@ context 'signing in' do
       # fill_in 'user_password', with: user.password
       # click_button 'Log in'
       sign_in_as(user)
-      save_and_open_page
       click_link "My To-Do List"
       click_link "Add Todo"
       fill_in "Title", with: "Buy Dad's Birthday present"
-      select "1", from: "sleeplog_date_3i"
+      select "1", from: "todo_due_3i"
       check "todo_starred"
-      click_button 'Create Sleeplog'
+      click_button 'Create Todo'
+      save_and_open_page
 
-      click_link "Sleeplogs"
-      click_link "Show Sleeplogs"
-      expect(page).to have_content("2016-01-30")
+      expect(page).to have_content("Buy Dad's Birthday present")
     end
   end
 end
