@@ -7,18 +7,14 @@ feature 'user adds todo', %{
 } do
 
 # Acceptance Criteria:
-# [ ] I can add a to-do list item with a title and optionally a due date
-# [ ] I can optionally star an important item
+# [X] I can add a to-do list item with a title and optionally a due date
+# [X] I can optionally star an important item
 
 let!(:user) { FactoryGirl.create(:user)}
 
 context 'signing in' do
     scenario "user adds a todo", js: true do
       visit root_path
-      # click_link 'Sign In'
-      # fill_in 'Email', with: user.email
-      # fill_in 'user_password', with: user.password
-      # click_button 'Log in'
       sign_in_as(user)
       click_link "My To-Do List"
       click_link "Add Todo"
@@ -26,7 +22,6 @@ context 'signing in' do
       select "1", from: "todo_due_3i"
       check "todo_starred"
       click_button 'Create Todo'
-      save_and_open_page
 
       expect(page).to have_content("Buy Dad's Birthday present")
     end
