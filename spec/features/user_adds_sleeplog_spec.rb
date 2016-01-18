@@ -12,15 +12,12 @@ feature 'user adds sleeplog', %{
 # [ ] I can record notes on my sleep to help identify patterns in why I slept poorly or well
 
 context 'signing in' do
-  before do
-    visit root_path
-    click_link 'Sign In'
-    fill_in 'Email', with: 'john@gmail.com'
-    fill_in 'user_password', with: 'topsecret'
-    click_button 'Log in'
-  end
-
     scenario "user adds a sleeplog", js: true do
+      visit root_path
+      click_link 'Sign In'
+      fill_in 'Email', with: 'john@gmail.com'
+      fill_in 'user_password', with: 'topsecret'
+      click_button 'Log in'
       click_link "Sleeplogs"
       click_link "Add Sleeplog"
       select "January", from: "sleeplog_date_2i"
