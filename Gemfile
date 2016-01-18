@@ -33,6 +33,8 @@ gem 'active_median'
 
 group :test do
   gem 'coveralls', require: false
+  gem 'poltergeist'
+  gem 'phantomjs'
 end
 
 group :development, :test do
@@ -45,6 +47,7 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
   gem 'faker'
+  gem 'selenium-webdriver'
 end
 
 group :development do
