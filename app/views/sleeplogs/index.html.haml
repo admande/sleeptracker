@@ -2,4 +2,5 @@
 %h1 Sleeplogs
 = line_chart Sleeplog.group(:date).sum(:hours), discrete: true, xtitle: "Date", ytitle: "Hours of Sleep"
 
-= render @sleeplogs
+#sleeplogs-links= link_to "Show Sleeplogs", root_path
+#sleeplogs-content= render @sleeplogs
