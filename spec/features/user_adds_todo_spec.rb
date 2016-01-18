@@ -10,9 +10,9 @@ feature 'user adds todo', %{
 # [X] I can add a to-do list item with a title and optionally a due date
 # [X] I can optionally star an important item
 
-let!(:user) { FactoryGirl.create(:user)}
+let!(:user) { FactoryGirl.create(:user) }
 
-context 'signing in' do
+  context 'signing in' do
     scenario "user adds a todo", js: true do
       visit root_path
       sign_in_as(user)
