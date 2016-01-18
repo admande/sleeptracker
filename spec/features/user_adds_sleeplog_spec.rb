@@ -22,8 +22,8 @@ feature 'user adds sleeplog', %{
       click_button 'Log in'
 
       click_link "Sleeplogs"
-      save_and_open_page
       click_link "Add Sleeplog"
+      sleep(5)
       select "January", from: "sleeplog_date_2i"
       select "30", from: "sleeplog_date_3i"
       find(:xpath, "//input[@id='sleeplog_hours']").set 4
