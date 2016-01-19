@@ -20,9 +20,9 @@ let!(:todo) { FactoryGirl.create(:todo, user: user) }
       visit root_path
       sign_in_as(user)
       click_link "My To-Do List"
-      find('#best_in_place_todo_1_title', :text => todo.title).click
+      find('#best_in_place_todo_1_title', text: todo.title).click
       fill_in '#best_in_place_todo_1_title', with: "Buy Dad's Birthday present"
-      find('#best_in_place_todo_1_title', :text => todo.title)
+      find('#best_in_place_todo_1_title', text: todo.title)
       find('#best_in_place_todo_1_title').native.send_keys(:return)
 
       expect(page).to have_content("Buy Dad's Birthday present")
