@@ -11,4 +11,9 @@ FactoryGirl.define do
     sequence(:date) { |i| "2016-01-#{i}" }
     hours { rand(1..10) }
   end
+
+  factory :todo do
+    user
+    title 'Grocery Shopping'
+  end
 end

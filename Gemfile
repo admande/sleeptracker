@@ -25,6 +25,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'dotenv'
 gem 'haml-rails'
+#inplace editing
+gem 'best_in_place'
 
 #helping creating charts for sleeplog
 gem 'chartkick'
