@@ -7,9 +7,7 @@ feature 'user deletes sleeplog', %{
 } do
 
 # Acceptance Criteria:
-# [ ] I can input the amount of sleep I got on any night within the last week
-# [ ] I can optionally include information about the quality of my sleep, time I got into bed, time I fell asleep, time I got out of bed, and if I took a sleeping pill
-# [X] I can record notes on my sleep to help identify patterns in why I slept poorly or well
+# [X] I can delete items from my to-do list at any time
 
   let!(:user) { FactoryGirl.create(:user) }
   let!(:todo) { FactoryGirl.create(:todo, user: user) }
