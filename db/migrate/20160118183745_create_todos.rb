@@ -6,6 +6,8 @@ class CreateTodos < ActiveRecord::Migration
       t.date :due
       t.boolean :completed
       t.boolean :starred
+
+      t.timestamps null: false
     end
   end
 end

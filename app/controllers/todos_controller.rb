@@ -4,7 +4,7 @@ class TodosController < ApplicationController
 
   def index
     @user = current_user
-    @todos = Todo.where(user: @user)
+    @todos = Todo.where(user: @user).order(created_at: :desc)
 
     respond_to do |format|
       format.html
@@ -20,7 +20,7 @@ class TodosController < ApplicationController
   end
 
   def create
-    @todo = Todo.new(sleeplog_params)
+    @todo = Todo.new(todo_params)
     @todo.user = current_user
     if @todo.save
       flash[:notice] = "Todo added successfully"
@@ -34,6 +34,16 @@ class TodosController < ApplicationController
   end
 
   def update
+    @todo = Todo.find(params[:id])
+    respond_to do |format|
+      if @todo.update_attributes(todo_params)
+        format.html { redirect_to(@todo, :notice => 'User was successfully updated.') }
+        format.json { respond_with_bip(@todo) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@todo) }
+      end
+    end
   end
 
   def destroy
@@ -41,7 +51,7 @@ class TodosController < ApplicationController
 
   private
 
-  def sleeplog_params
+  def todo_params
     params.require(:todo).permit(:title, :due, :completed, :starred)
   end
 end
