@@ -23,7 +23,6 @@ class TodosController < ApplicationController
     @todo = Todo.new(todo_params)
     @todo.user = current_user
     if @todo.save
-      flash[:notice] = "Todo added successfully"
     else
       flash.now[:errors] = @todo.errors.full_messages.join(". ")
       render :new
@@ -37,7 +36,7 @@ class TodosController < ApplicationController
     @todo = Todo.find(params[:id])
     respond_to do |format|
       if @todo.update_attributes(todo_params)
-        format.html { redirect_to(@todo, notice:'User was successfully updated.') }
+        format.html { redirect_to(@todo, notice: 'User was successfully updated.') }
         format.json { respond_with_bip(@todo) }
       else
         format.html { render action: "edit" }
@@ -47,6 +46,14 @@ class TodosController < ApplicationController
   end
 
   def destroy
+    @todo = Todo.find(params[:id])
+    @todo.destroy
+
+    respond_to do |format|
+      format.html { redirect_to ponies_url }
+      format.json { head :no_content }
+      format.js   { render :layout => false }
+    end
   end
 
   private

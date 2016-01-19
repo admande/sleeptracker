@@ -1,4 +1,4 @@
 = div_for todo do
   %h3#to_do_item= best_in_place todo, :title
   %ul
-    %li= link_to "Delete Todo", todo, remote: true, method: :delete
+    %li.delete_todo= link_to "Delete Todo", todo, remote: true, method: :delete
