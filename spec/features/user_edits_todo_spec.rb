@@ -12,8 +12,8 @@ feature 'user edits todo', %{
 # [ ] I can star and unstar items
 # [ ] I cannot update completed items from my to-do list
 
-let!(:user) { FactoryGirl.create(:user) }
-let!(:todo) { FactoryGirl.create(:todo, user: user) }
+  let!(:user) { FactoryGirl.create(:user) }
+  let!(:todo) { FactoryGirl.create(:todo, user: user) }
 
   context 'edit todo' do
     xscenario "user edits a todo", js: true do
