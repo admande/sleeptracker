@@ -33,6 +33,10 @@ gem 'chartkick'
 gem 'groupdate'
 gem 'active_median'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :test do
   gem 'coveralls', require: false
   gem 'poltergeist'
