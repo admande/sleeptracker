@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120022246) do
+ActiveRecord::Schema.define(version: 20160120160222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 20160120022246) do
     t.boolean  "starred"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_reminders", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "reminder_id"
+    t.time    "time"
+    t.boolean "weekend_disable", default: false
   end
 
   create_table "users", force: :cascade do |t|

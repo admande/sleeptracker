@@ -1,0 +1,7 @@
+.reminder{ id: "reminder_id_#{reminder.id}" }
+  = link_to new_reminder_user_reminder_path(reminder), remote: true do
+    .reminder_info
+      %li= reminder.title
+      %p= reminder.body
+
+  .user_reminder_form{ id: "user_reminder_id_#{reminder.id}" }

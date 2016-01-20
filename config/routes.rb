@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   resources :todos
 
-  resources :reminders
+  resources :reminders do
+    resources :user_reminders
+  end
 end
