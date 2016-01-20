@@ -19,21 +19,16 @@ class UserRemindersController < ApplicationController
   end
 
   def edit
-    binding.pry
     @reminder = Reminder.find(params[:reminder_id])
     @user_reminder = UserReminder.find_by(reminder: @reminder, user: current_user)
   end
 
   def update
-    @user_reminder = Todo.find(params[:id])
-    respond_to do |format|
-      if @todo.update_attributes(todo_params)
-        format.html { redirect_to(@todo, notice: 'User was successfully updated.') }
-        format.json { respond_with_bip(@todo) }
-      else
-        format.html { render action: "edit" }
-        format.json { respond_with_bip(@todo) }
-      end
+    @user_reminder = UserReminder.find(params[:id])
+    @reminder = @user_reminder.reminder
+    if @user_reminder.update_attributes(user_reminder_params)
+    else
+      render :edit
     end
   end
 
