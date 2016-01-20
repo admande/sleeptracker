@@ -5,6 +5,7 @@ class UserRemindersController < ApplicationController
   def new
     @reminder = Reminder.find(params[:reminder_id])
     @user_reminder = UserReminder.new
+    binding.pry
   end
 
   def create
@@ -19,6 +20,9 @@ class UserRemindersController < ApplicationController
   end
 
   def edit
+    binding.pry
+    @reminder = Reminder.find(params[:reminder_id])
+    @user_reminder = UserReminder.find_by(reminder: @reminder, user: current_user)
   end
 
   def update
