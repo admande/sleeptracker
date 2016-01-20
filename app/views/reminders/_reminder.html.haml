@@ -1,0 +1,16 @@
+.reminder{ id: "reminder_id_#{reminder.id}" }
+  - if reminder.user_reminders.where(user: current_user).empty?
+    = link_to new_reminder_user_reminder_path(reminder), remote: true do
+      .reminder_info
+        %li= reminder.title
+        %p= reminder.body
+
+    .user_reminder_form{ id: "user_reminder_id_#{reminder.id}" }
+  - else
+    = link_to edit_reminder_user_reminder_path(reminder,
+      reminder.user_reminders.where(user: current_user)), remote: true do
+      .reminder_info
+        %li= reminder.title
+        %p= reminder.body
+
+    .user_reminder_form{ id: "user_reminder_id_#{reminder.id}" }

@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   has_many :sleeplogs
   has_many :todos
+  has_many :user_reminders
+  has_many :reminders, through: :user_reminders
+
 
   validates :first_name, presence: true
   validates :last_name, presence: true
