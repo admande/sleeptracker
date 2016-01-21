@@ -1,12 +1,15 @@
 #todo
   = simple_form_for @todo, remote: true do |f|
-    %p= f.input :title
-    %p= f.input :due, as: :date,
-                    start_year: Time.now.year - 1,
-                    end_year: Time.now.year,
-                    start_month: Time.now.month - 1,
-                    end_month: Time.now.month,
-                    order: [:month, :day, :year]
-    %p= f.input :completed, as: :boolean, checked_value: true, unchecked_value: false
-    %p= f.input :starred, as: :boolean, checked_value: true, unchecked_value: false
-    %p= f.submit
+    .row
+      %p= f.input :title
+    .row
+      %p= f.input :due, as: :date,
+                      start_year: Time.now.year - 1,
+                      end_year: Time.now.year,
+                      start_month: Time.now.month - 1,
+                      end_month: Time.now.month,
+                      order: [:month, :day, :year]
+    .row
+      %p= f.input :completed, as: :boolean, checked_value: true, unchecked_value: false
+      %p= f.input :starred, as: :boolean, checked_value: true, unchecked_value: false
+      %p= f.submit

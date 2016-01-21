@@ -1,8 +1,14 @@
 = javascript_include_tag "//www.google.com/jsapi", "chartkick"
-%h1 Sleeplogs
-#sleeplog-chart= column_chart Sleeplog.order(:date).group(:date).sum(:hours), discrete: true, xtitle: "Date", ytitle: "Hours of Sleep"
+.row
+  %h1 Sleeplogs
+.row
+  #sleeplog-chart= column_chart Sleeplog.order(:date).group(:date).sum(:hours), discrete: true, xtitle: "Date", ytitle: "Hours of Sleep"
 
-#sleeplogs= link_to "Add Sleeplog", new_sleeplog_path, remote: true
-#sleeplog-form
-#sleeplogs-links= link_to "Show Sleeplogs"
-#sleeplogs-content= render @sleeplogs
+.row
+  #sleeplogs= link_to "Add Sleeplog", new_sleeplog_path, remote: true
+.row
+  #sleeplog-form
+.row
+  #sleeplogs-links= link_to "Show Sleeplogs"
+.row
+  #sleeplogs-content= render @sleeplogs
