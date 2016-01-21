@@ -2,6 +2,6 @@
   %p= @diary.date
   %p= @diary.body
   -if @diary.sentiment
-    %p= "Sentiment: #{@diary.sentiment*100}%"
+    %p= "Sentiment: #{(@diary.sentiment*100).round}%"
   -else
     %button.sentiment_button= button_to "Calculate Sentiment", edit_diary_path(@diary), remote: true

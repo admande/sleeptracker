@@ -24,6 +24,7 @@ class DiariesController < ApplicationController
       flash.now[:errors] = @diary.errors.full_messages.join(". ")
       render :new
     end
+    binding.pry
   end
 
   def edit
@@ -40,6 +41,6 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:date, :sentiment, :body)
+    params.require(:diary).permit(:date, :body)
   end
 end

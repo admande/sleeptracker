@@ -10,6 +10,8 @@ class Diary < ActiveRecord::Base
   private
 
   def sentiment_analysis
-    self.sentiment = Indico.sentiment(self.body, ENV["INDICO_API_KEY"])
+    text = self.body
+    Indico.api_key = ENV["INDICO_API_KEY"]
+    self.sentiment = Indico.sentiment(text)
   end
 end

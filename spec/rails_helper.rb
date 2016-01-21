@@ -7,6 +7,8 @@ require 'spec_helper'
 require 'rspec/rails'
 require "support/helpers/authentication_helper"
 require 'capybara/poltergeist'
+require 'dotenv'
+require 'indico'
 
 Capybara.javascript_driver = :poltergeist
 

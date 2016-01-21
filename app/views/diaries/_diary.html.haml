@@ -3,4 +3,4 @@
     %li= diary.date
     = truncate(diary.body, length: 80)
     - if diary.sentiment
-      = "Sentiment rating: #{(diary.sentiment * 100)}%"
+      = "Sentiment rating: #{(diary.sentiment * 100).round}%"
