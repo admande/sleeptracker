@@ -28,6 +28,9 @@ gem 'haml-rails'
 #inplace editing
 gem 'best_in_place'
 
+#sentiment analysis
+gem 'indico'
+
 #helping creating charts for sleeplog
 gem 'chartkick'
 gem 'groupdate'

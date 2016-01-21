@@ -93,3 +93,17 @@ Reminder.create(
   title: "Take a break",
   body: "Not sure if the sun is still out? Go outside and find out! Exposing yourself to sunlight during the day helps you sleep better at night."
 )
+
+Diary.create(
+  user_id: user.id,
+  date: "2016-01-19",
+  body: "Today was a real rough today because my car broke down and I realized my AAA had expired. I called my dad to come help me out, but he didn't pick up his phone. I eventually had to call my ex-boyfriend to come. Of course he brought his new boy along and we all had to squeeze together in the front seat of the pick-up truck, with that new guy putting his hand on Derek's knee and I just had to sit there.",
+  sentiment: 0.03
+)
+
+Diary.create(
+  user_id: user.id,
+  date: "2016-01-18",
+  body: "John and Dena finally announced their engagement today. I'm so happy for them. I kenw it was coming cause John and texted me the night before askign for advice on what to wear. Dena looked so happy in the pictures. They asked me today if I wanted to officiate their wedding. I was kind of nervous about it. I feel like I just want to go and enjoy the wedding and don't want to have to worry about presenting, but I also want them to be happy.",
+  sentiment: 0.77
+)
