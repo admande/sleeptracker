@@ -24,7 +24,6 @@ class DiariesController < ApplicationController
       flash.now[:errors] = @diary.errors.full_messages.join(". ")
       render :new
     end
-    binding.pry
   end
 
   def edit
@@ -32,7 +31,6 @@ class DiariesController < ApplicationController
 
   def update
     @diary = Diary.find(params[:id])
-
   end
 
   def destroy
