@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :reminders do
     resources :user_reminders
   end
+
+  resources :diaries
 end
