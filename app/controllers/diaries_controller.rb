@@ -31,15 +31,7 @@ class DiariesController < ApplicationController
 
   def update
     @diary = Diary.find(params[:id])
-    respond_to do |format|
-      if @diary.update_attributes(diary_params)
-        format.html { redirect_to(@diary, notice: 'User was successfully updated.') }
-        format.json { respond_with_bip(@diary) }
-      else
-        format.html { render action: "edit" }
-        format.json { respond_with_bip(@diary) }
-      end
-    end
+
   end
 
   def destroy
