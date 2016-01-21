@@ -5,7 +5,6 @@ describe Todo do
   it {should_not have_valid(:title).when('', nil)}
 
   it {should have_valid(:due).when('2016-01-03', nil)}
-  # it {should_not have_valid(:due).when('cat','1-1-1','011111')}
 
   it { should belong_to(:user) }
 end
