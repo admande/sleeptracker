@@ -4,14 +4,14 @@ describe User do
   it { should have_many(:user_reminders) }
   it { should have_many(:todos) }
 
-  it {should have_valid(:first_name).when('John', 'Sally')}
-  it {should_not have_valid(:first_name).when('', nil)}
+  it { should have_valid(:first_name).when('John', 'Sally') }
+  it { should_not have_valid(:first_name).when('', nil) }
 
-  it {should have_valid(:last_name).when('Smith', 'Swanson')}
-  it {should_not have_valid(:last_name).when('', nil)}
+  it { should have_valid(:last_name).when('Smith', 'Swanson') }
+  it { should_not have_valid(:last_name).when('', nil) }
 
-  it {should have_valid(:email).when('user@example.com', 'another@gmail.com')}
-  it {should_not have_valid(:email).when('userexample.com', nil, 'users@com')}
+  it { should have_valid(:email).when('user@example.com', 'another@gmail.com') }
+  it { should_not have_valid(:email).when('userexample.com', nil, 'users@com') }
 
   it 'has a matching password confirmation for the password' do
     user = User.new

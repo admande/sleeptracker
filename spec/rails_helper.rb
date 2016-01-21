@@ -8,12 +8,16 @@ require 'rspec/rails'
 require 'shoulda-matchers'
 require "support/helpers/authentication_helper"
 require 'capybara/poltergeist'
+require 'dotenv'
+require 'indico'
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
     with.library :rails
   end
 end
+
 Capybara.javascript_driver = :poltergeist
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
