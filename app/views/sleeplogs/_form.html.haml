@@ -5,12 +5,12 @@
         = f.date_field :date
     .row
       .small-8.small-centered.columns
-        .range-slider{"data-options" => "start: 0; end: 16; display_selector: #sliderOutput", "data-slider" => ""}
-          %span.range-slider-handle{:role => "slider", :tabindex => "0"}
+        .range-slider{ "data-options" => "start: 0; end: 16; display_selector: #sliderOutput", "data-slider" => "" }
+          %span.range-slider-handle{ :role => "slider", :tabindex => "0" }
           %span.range-slider-active-segment
-          %input#sleeplog_hours{:name => "sleeplog[hours]", :type => "hidden"}
+          %input#sleeplog_hours{ :name => "sleeplog[hours]", :type => "hidden" }
         .small-12.columns.small-centered
-          %input#sliderOutput{:type => "number", :value => "8"}
+          %input#sliderOutput{ :type => "number", :value => "8" }
 
 
 
