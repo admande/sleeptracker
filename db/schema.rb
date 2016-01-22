@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160121152151) do
+ActiveRecord::Schema.define(version: 20160122181500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20160121152151) do
     t.integer "diary_id"
     t.boolean "sleeping_pill"
   end
+
+  add_index "sleeplogs", ["date"], name: "index_sleeplogs_on_date", unique: true, using: :btree
 
   create_table "todos", force: :cascade do |t|
     t.string   "title",      null: false
