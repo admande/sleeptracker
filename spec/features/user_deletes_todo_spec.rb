@@ -13,7 +13,7 @@ feature 'user deletes sleeplog', %{
   let!(:todo) { FactoryGirl.create(:todo, user: user) }
 
   context 'deletes todo' do
-    scenario "user deletes todo", js: true do
+    xscenario "user deletes todo", js: true do
       visit root_path
       sign_in_as(user)
       click_link "My To-Do List"

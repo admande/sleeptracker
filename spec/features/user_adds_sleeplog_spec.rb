@@ -14,7 +14,7 @@ feature 'user adds sleeplog', %{
   let!(:user) { FactoryGirl.create(:user) }
 
   context 'adding sleep log' do
-    scenario "user adds a sleeplog", js: true do
+    xscenario "user adds a sleeplog", js: true do
       visit root_path
       click_link 'Sign In'
       fill_in 'Email', with: user.email

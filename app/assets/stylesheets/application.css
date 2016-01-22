@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+  @import url(https://fonts.googleapis.com/css?family=Ek+Mukta:700);
+
+$purple         : #3D42C4;

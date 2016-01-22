@@ -13,7 +13,7 @@ feature 'user adds todo', %{
 let!(:user) { FactoryGirl.create(:user) }
 
   context 'signing in' do
-    scenario "user adds a todo", js: true do
+    xscenario "user adds a todo", js: true do
       visit root_path
       sign_in_as(user)
       click_link "My To-Do List"

@@ -1,6 +1,8 @@
 
+.row
+  #todos= link_to "Add Todo", new_todo_path, remote: true
+.row
+  #todo-form
 
-#todos= link_to "Add Todo", new_todo_path, remote: true
-#todo-form
-
-#todos-content= render @todos
+.row
+  #todos-content= render @todos
