@@ -17,4 +17,4 @@
 //= require_tree .
 //= require best_in_place
 
-$(function(){ $(document).foundation(); });
+$(function() { $(document).foundation(); });

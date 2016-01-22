@@ -3,12 +3,7 @@
     .row
       .columns.small-12.medium-8= f.input :title
     .row
-      .columns.small-12.medium-8= f.input :due, as: :date,
-                      start_year: Time.now.year - 1,
-                      end_year: Time.now.year,
-                      start_month: Time.now.month - 1,
-                      end_month: Time.now.month,
-                      order: [:month, :day, :year]
+      .columns.small-12.medium-8= f.date_field :due
     .row
       .columns.small-12.medium-4= f.input :completed, as: :boolean, checked_value: true, unchecked_value: false
       .columns.small-12.medium-4.end= f.input :starred, as: :boolean, checked_value: true, unchecked_value: false

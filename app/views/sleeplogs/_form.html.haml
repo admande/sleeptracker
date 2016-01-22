@@ -1,22 +1,18 @@
 #sleeplog
   = simple_form_for @sleeplog, remote: true do |f|
     .row
-      %p= f.input :date, as: :date,
-                    start_year: Time.now.year - 1,
-                    end_year: Time.now.year,
-                    start_month: Time.now.month - 1,
-                    end_month: Time.now.month,
-                    order: [:month, :day, :year]
+      .small-2.columns
+        = f.date_field :date
     .row
-      .small-6.medium-6.columns
-        =f.label :hours
-      .small-6.medium-6.columns
-        .range-slider.radius#hours{data: {slider: '', options: "display_selector: #sliderOutput1; start: 0; end: 24"}}
-          %span.range-slider-handle
+      .small-8.small-centered.columns
+        .range-slider{"data-options" => "start: 0; end: 16; display_selector: #sliderOutput", "data-slider" => ""}
+          %span.range-slider-handle{:role => "slider", :tabindex => "0"}
           %span.range-slider-active-segment
-      .small-2.medium-1.columns
-        =f.hidden_field :hours, id: 'sliderOutput1', class: 'radius'
-        %span{id: 'sliderOutput1'}
+          %input#sleeplog_hours{:name => "sleeplog[hours]", :type => "hidden"}
+        .small-12.columns.small-centered
+          %input#sliderOutput{:type => "number", :value => "8"}
+
+
 
     .row
       %p= f.input :quality
