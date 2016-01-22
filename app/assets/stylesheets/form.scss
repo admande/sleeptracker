@@ -1,0 +1,30 @@
+$font-family-sans-serif: "Ek Mukta", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+
+.date.required.form-control{
+display: inline-block;
+width: 32%;
+margin-right: 5px;
+}
+
+form {
+  select {
+    display: inline-block;
+    width: 100px;
+    margin-right: 5px;
+  }
+}
+
+.button {
+  padding: 0px;
+}
+
+.button {
+  input {
+    background-color: inherit;
+    border: none;
+    font-family: $font-family-sans-serif;
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+  }
+}
