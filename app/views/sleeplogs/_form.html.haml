@@ -8,7 +8,16 @@
                     end_month: Time.now.month,
                     order: [:month, :day, :year]
     .row
-      %p= f.input :hours, as: :range, min: "0", max: "24"
+      .small-6.medium-6.columns
+        =f.label :hours
+      .small-6.medium-6.columns
+        .range-slider.radius#hours{data: {slider: '', options: "display_selector: #sliderOutput1; start: 0; end: 24"}}
+          %span.range-slider-handle
+          %span.range-slider-active-segment
+      .small-2.medium-1.columns
+        =f.hidden_field :hours, id: 'sliderOutput1', class: 'radius'
+        %span{id: 'sliderOutput1'}
+
     .row
       %p= f.input :quality
     .row
