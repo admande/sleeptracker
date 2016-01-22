@@ -1,24 +1,24 @@
 #sleeplog
   = simple_form_for @sleeplog, remote: true do |f|
     .row
-      %p=f.input :date, as: :date,
+      %p= f.input :date, as: :date,
                     start_year: Time.now.year - 1,
                     end_year: Time.now.year,
                     start_month: Time.now.month - 1,
                     end_month: Time.now.month,
                     order: [:month, :day, :year]
     .row
-      %p=f.input :hours, as: :range, min: "0", max: "24"
+      %p= f.input :hours, as: :range, min: "0", max: "24"
     .row
-      %p=f.input :quality
+      %p= f.input :quality
     .row
-      %p=f.input :notes
+      %p= f.input :notes
     .row
-      %p=f.input :in_bed_time
+      %p= f.input :in_bed_time
     .row
-      %p=f.input :fall_asleep_time
+      %p= f.input :fall_asleep_time
     .row
-      %p=f.input :wake_up_time
+      %p= f.input :wake_up_time
     .row
-      %p=f.input :sleeping_pill, as: :boolean, checked_value: true, unchecked_value: false
-      %p=f.submit
+      %p= f.input :sleeping_pill, as: :boolean, checked_value: true, unchecked_value: false
+      .button= f.submit

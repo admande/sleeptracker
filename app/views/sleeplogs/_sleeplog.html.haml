@@ -1,5 +1,5 @@
 .row
-  %li= "Date: #{l sleeplog.date}"
+  = "Date: #{l sleeplog.date}"
   = "Hours #{sleeplog.hours}"
   - if sleeplog.quality
     = "Quality #{sleeplog.quality}"
@@ -13,3 +13,6 @@
     = "Woke up at #{l sleeplog.wake_up_time}"
   - if sleeplog.sleeping_pill
     = sleeplog.sleeping_pill
+  - if Diary.where(user: current_user, date: sleeplog.date).present?
+    - Diary.where(user: current_user, date: sleeplog.date).each_with_index do |diary, index|
+      %p= link_to "Diary sentiment: #{(diary.sentiment * 100).round}%", diary_path(diary)
