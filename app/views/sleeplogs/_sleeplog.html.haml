@@ -1,15 +1,15 @@
 .row
-  %li= "Date #{sleeplog.date}"
+  %li= "Date: #{l sleeplog.date}"
   = "Hours #{sleeplog.hours}"
   - if sleeplog.quality
     = "Quality #{sleeplog.quality}"
   - if sleeplog.notes
     = "Notes #{sleeplog.notes}"
   - if sleeplog.in_bed_time
-    = "Went to bed at #{sleeplog.in_bed_time}"
+    = "Went to bed at #{l sleeplog.in_bed_time}"
   - if sleeplog.fall_asleep_time
-    = sleeplog.fall_asleep_time
+    = "Fell asleep at #{l sleeplog.fall_asleep_time}"
   - if sleeplog.wake_up_time
-    = sleeplog.wake_up_time
+    = "Woke up at #{l sleeplog.wake_up_time}"
   - if sleeplog.sleeping_pill
     = sleeplog.sleeping_pill
