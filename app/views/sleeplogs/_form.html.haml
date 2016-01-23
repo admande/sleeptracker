@@ -1,7 +1,7 @@
 #sleeplog
   = simple_form_for @sleeplog, remote: true do |f|
     .row
-      .small-2.columns
+      .small-4.columns
         = f.date_field :date
     .row
       .small-8.small-centered.columns
@@ -11,19 +11,16 @@
           %input#sleeplog_hours{ :name => "sleeplog[hours]", :type => "hidden" }
         .small-12.columns.small-centered
           %input#sliderOutput{ :type => "number", :value => "8" }
-
-
-
     .row
       %p= f.input :quality
     .row
       %p= f.input :notes
     .row
-      %p= f.input :in_bed_time
+      %p= f.input :in_bed_time, include_blank: true
     .row
-      %p= f.input :fall_asleep_time
+      %p= f.input :fall_asleep_time, include_blank: true
     .row
-      %p= f.input :wake_up_time
+      %p= f.input :wake_up_time, include_blank: true
     .row
       %p= f.input :sleeping_pill, as: :boolean, checked_value: true, unchecked_value: false
       .button= f.submit
