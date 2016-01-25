@@ -8,7 +8,7 @@ FactoryGirl.define do
 
   factory :sleeplog do
     user
-    sequence(:date) { |i| "2016-01-#{i}" }
+    sequence(:date) { |i| "2015-01-#{i}" }
     hours { rand(1..10) }
   end
 
