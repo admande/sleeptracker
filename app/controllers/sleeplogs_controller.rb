@@ -5,11 +5,15 @@ class SleeplogsController < ApplicationController
 
   def index
     @user = current_user
-    @sleeplogs = Sleeplog.where(user: @user).order(date: :desc)
+    @sleeplogs = Sleeplog.where(user: @user).order(date: :asc)
 
     respond_to do |format|
-      format.js
       format.html
+      format.json do
+        dates = @sleeplogs.map{ |sleeplog| sleeplog.date }
+        hours = @sleeplogs.map{ |sleeplog| sleeplog.hours }
+        render json: [dates, hours]
+      end
     end
   end
 
@@ -24,7 +28,6 @@ class SleeplogsController < ApplicationController
     @sleeplog = Sleeplog.new(sleeplog_params)
     @sleeplog.user = current_user
     if @sleeplog.save
-      binding.pry
       flash[:notice] = "Sleeplog added successfully"
     else
       flash.now[:errors] = @sleeplog.errors.full_messages.join(". ")
