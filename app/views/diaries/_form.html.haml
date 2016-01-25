@@ -1,4 +1,4 @@
 = simple_form_for @diary do |f|
-  .row= f.date_field :date
+  .row= f.date_field :date, value: Date.today
   .row= f.input :body
   .button= f.submit

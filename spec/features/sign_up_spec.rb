@@ -25,6 +25,7 @@ So I can gain access to the app
       fill_in 'First Name', with: 'Jon'
       fill_in 'Last Name', with: 'Smith'
       fill_in 'Email', with: 'user@example.com'
+      fill_in 'Phone Number', with: '1111111111'
       fill_in 'user_password', with: 'password'
       fill_in 'Password Confirmation', with: 'password'
       click_button 'Sign Up'
@@ -60,6 +61,7 @@ So I can gain access to the app
     scenario 'user tries to register with already used password' do
       fill_in 'First Name', with: 'Jon'
       fill_in 'Last Name', with: 'Smith'
+      fill_in 'Phone Number', with: '1111111111'
       fill_in 'Email', with: 'user@example.com'
       fill_in 'user_password', with: 'password'
       fill_in 'Password Confirmation', with: 'password'

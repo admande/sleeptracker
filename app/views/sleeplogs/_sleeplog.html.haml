@@ -1,10 +1,10 @@
 .row
   = "Date: #{l sleeplog.date}"
   = "Hours #{sleeplog.hours}"
-  - if sleeplog.quality
-    = "Quality #{sleeplog.quality}"
-  - if sleeplog.notes
-    = "Notes #{sleeplog.notes}"
+  - unless sleeplog.quality.blank?
+    = "Quality: #{sleeplog.quality}"
+  - unless sleeplog.notes.blank?
+    = "Notes: #{sleeplog.notes}"
   - if sleeplog.in_bed_time
     = "Went to bed at #{l sleeplog.in_bed_time}"
   - if sleeplog.fall_asleep_time

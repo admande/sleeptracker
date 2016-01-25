@@ -24,6 +24,7 @@ class SleeplogsController < ApplicationController
     @sleeplog = Sleeplog.new(sleeplog_params)
     @sleeplog.user = current_user
     if @sleeplog.save
+      binding.pry
       flash[:notice] = "Sleeplog added successfully"
     else
       flash.now[:errors] = @sleeplog.errors.full_messages.join(". ")

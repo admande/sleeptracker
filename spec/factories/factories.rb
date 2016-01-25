@@ -4,6 +4,7 @@ FactoryGirl.define do
     last_name 'Tavers'
     email 'kyle.tavers@gmail.com'
     password 'password!'
+    phone '7815555555'
   end
 
   factory :sleeplog do

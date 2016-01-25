@@ -5,4 +5,4 @@ en:
       default: "%B %d, %Y"
   time:
     formats:
-      default: "%H:%M"
+      default: "%H:%M %p"
