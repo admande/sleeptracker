@@ -3,7 +3,8 @@ user = User.create(
   last_name: "G",
   email: 'john@gmail.com',
   password: 'topsecret',
-  password_confirmation: 'topsecret'
+  password_confirmation: 'topsecret',
+  phone: '6175555555'
 )
 
 Sleeplog.create(

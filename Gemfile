@@ -36,6 +36,13 @@ gem 'chartkick'
 gem 'groupdate'
 gem 'active_median'
 
+# sending user reminders
+gem 'twilio-ruby'
+# Use delayed job for running background jobs
+gem 'delayed_job_active_record'
+# Need daemons to start delayed_job
+gem 'daemons'
+
 group :production do
   gem 'rails_12factor'
 end

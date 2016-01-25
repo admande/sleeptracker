@@ -4,7 +4,8 @@
   .row
     %p= f.input :reminder_id, as: :hidden, input_html: { value: @reminder.id }
   .row
-    %p= f.input :time
+    = f.label :time
+    %p= f.time_field :time
   .row
     = f.input :weekend_disable, checked_value: true, unchecked_value: false
     .button= f.submit
