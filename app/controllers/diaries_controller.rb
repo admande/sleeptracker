@@ -3,7 +3,11 @@ class DiariesController < ApplicationController
 
   def index
     @user = current_user
-    @diaries = Diary.where(user: @user).order(date: :desc)
+    if params[:diary_body_search]
+      @diaries = Diary.search_by_diary_body(params[:diary_body_search]).order(:date)
+    else
+      @diaries = Diary.where(user: @user).order(date: :desc)
+    end
   end
 
   def show

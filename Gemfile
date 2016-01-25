@@ -31,6 +31,8 @@ gem 'best_in_place'
 #sentiment analysis
 gem 'indico'
 
+gem 'pg_search'
+
 #helping creating charts for sleeplog
 gem 'chartkick'
 gem 'groupdate'
