@@ -1,6 +1,6 @@
 class Diary < ActiveRecord::Base
   include PgSearch
-  before_validation :sentiment_analysis
+  before_save :sentiment_analysis
   validate :date_cannot_be_in_future
   pg_search_scope :search_by_diary_body, against: :body, using: { tsearch: { prefix: true } }
 
