@@ -4,7 +4,7 @@
 $backdrop : #C9D6AE;
 
 .welcome {
-  background-image: image-url('Whistler-Nocturne_in_black_and_gold.jpg');
+  background-image: image-url('skyscrapers.jpg');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -15,11 +15,27 @@ $backdrop : #C9D6AE;
   }
 
 .top-bar {
-  position: inherit;
+  position-left: 0;
+  position-right: 0;
   width: 100%;
 }
 
-.text-center {
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+#welcome-title {
   font-size: 80px;
   color: white;
+  margin-left: 10px;
+  word-wrap: break-word;
+}
+
+#welcome-description {
+  font-size: 24px;
+  color: white;
+  margin-left: 10px;
 }

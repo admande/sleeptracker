@@ -113,7 +113,7 @@ $font-family-sans-serif: "Ek Mukta", "Helvetica Neue", Helvetica, Roboto, Arial,
 // $tuatara     : #444444;
 $oil         : #333333;
 // $jet         : #222222;
-// $black       : #000000;
+$black       : #000000;
 $purple         : #3D42C4;
 
 // We use these as default colors throughout
@@ -1404,7 +1404,7 @@ $purple         : #3D42C4;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $oil;
+$topbar-bg-color: $black;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin

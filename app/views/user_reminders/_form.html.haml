@@ -1,11 +1,9 @@
 = simple_form_for [@reminder, @user_reminder], remote: true do |f|
+  = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
+  = f.input :reminder_id, as: :hidden, input_html: { value: @reminder.id }
   .row
-    %p= f.input :user_id, as: :hidden, input_html: { value: current_user.id }
+    .small-11.small-offset-1.columns= f.label :time
+    %p.small-11.small-offset-1.columns= f.time_field :time
   .row
-    %p= f.input :reminder_id, as: :hidden, input_html: { value: @reminder.id }
-  .row
-    = f.label :time
-    %p= f.time_field :time
-  .row
-    = f.input :weekend_disable, checked_value: true, unchecked_value: false
-    .button= f.submit
+    .small-11.small-offset-1.columns= f.input :weekend_disable, checked_value: true, unchecked_value: false
+    .small-11.small-offset-1.columns.button= f.submit

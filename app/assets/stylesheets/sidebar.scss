@@ -1,8 +1,32 @@
 $purple         : #3D42C4;
+$purple-dark: scale-color($purple, $lightness: -30%);
+$purple-dark1: scale-color($purple, $lightness: -50%);
+$purple-dark2: scale-color($purple, $lightness: -65%);
+$purple-light: scale-color($purple, $lightness: +20%);
 
 .sidebar {
   background-color: $purple;
+  padding: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
   a {
     color: white;
-  }
+    }
+}
+
+.sidebar_links {
+  padding: 10px;
+  padding-left: 30px
+}
+
+.sidebar_links:hover {
+  background-color: $purple-light;
+}
+
+.sidebar_links:active {
+  background-color: $purple-dark;
+}
+
+.sidebar_links:current {
+  background-color: $purple-dark;
 }

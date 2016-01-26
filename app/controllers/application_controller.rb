@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone, :time_zone]
     devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name, :phone, :time_zone]
   end
+
+  def after_sign_in_path_for(resource)
+    '/sleeplogs'
+  end
+
+  def after_sign_in_path_for(resource)
+    '/sleeplogs'
+  end
 end
