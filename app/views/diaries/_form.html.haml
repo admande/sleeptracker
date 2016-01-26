@@ -1,4 +1,7 @@
 = simple_form_for @diary do |f|
-  .row= f.date_field :date, value: Date.today
-  .row= f.input :body
-  .button= f.submit
+  .row
+    .small-11.small-offset-1.columns= f.date_field :date, value: Date.today
+  .row
+    .small-11.small-offset-1.columns= f.input :body
+  .row
+    .small-11.small-offset-1.columns.button= f.submit
