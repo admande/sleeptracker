@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     '/sleeplogs'
   end
 
-  def after_sign_in_path_for(resource)
+  def after_update_path_for(resource)
     '/sleeplogs'
   end
 end
