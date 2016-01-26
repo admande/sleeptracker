@@ -2,3 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $backdrop : #C9D6AE;
+
+.welcome {
+  background-image: image-url('Whistler-Nocturne_in_black_and_gold.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 1024px;
+  }
+
+.top-bar {
+  position: inherit;
+  width: 100%;
+}
+
+.text-center {
+  font-size: 80px;
+  color: white;
+}
