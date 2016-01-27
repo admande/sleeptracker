@@ -1,7 +1,6 @@
-.row
-  = div_for todo do
-    .row
-      %h3#to_do_item= best_in_place todo, :title
-      - if todo.due
-        = l todo.due
-      %p.delete_todo= link_to "Delete Todo", todo, remote: true, method: :delete
+= div_for todo do
+  .row
+    %h3#to_do_item= best_in_place todo, :title
+    - if todo.due
+      = l todo.due
+    %p.delete_todo= link_to "Delete Todo", todo, remote: true, method: :delete

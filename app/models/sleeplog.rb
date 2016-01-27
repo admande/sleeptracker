@@ -3,7 +3,8 @@ class Sleeplog < ActiveRecord::Base
   validate :date_cannot_be_in_future
 
   validates :user_id, presence: true, numericality: { only_integer: true }
-  validates :date, presence: true, uniqueness: true
+  validates :date, presence: true
+  validates :date, uniqueness: true
   validates :hours, presence: true, numericality: { greater_than: 0, less_than: 16 }
 
   private

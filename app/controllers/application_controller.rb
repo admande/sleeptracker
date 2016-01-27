@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone]
-    devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name, :phone]
+    devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone, :time_zone]
+    devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name, :phone, :time_zone]
+  end
+
+  def after_sign_in_path_for(resource)
+    '/sleeplogs'
   end
 end

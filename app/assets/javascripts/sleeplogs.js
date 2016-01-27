@@ -5,22 +5,6 @@ $(document).ready(function() {
   })
 })
 
-
-$(function () {
-  $.ajax({
-    method: "GET",
-    url: "/sleeplogs",
-    dataType: "json"
-  })
-
-  .done(function(data){
-    var dates = data[0];
-    var hours = data[1];
-    barHighChart(dates, hours);
-  });
-
-});
-
 var barHighChart = function(dates, hours) {
   $('#container-1').highcharts({
     chart: {
@@ -38,11 +22,26 @@ var barHighChart = function(dates, hours) {
       }
     },
     rangeSelector: {
-        allButtonsEnabled: true,
-        selected: 2
+      allButtonsEnabled: true,
+      selected: 2
     },
     series: [{
       data: hours
     }]
   });
 };
+
+$(function () {
+  $.ajax({
+    method: "GET",
+    url: "/sleeplogs",
+    dataType: "json"
+  })
+
+  .done(function(data){
+    var dates = data[0];
+    var hours = data[1];
+    barHighChart(dates, hours);
+  });
+
+});

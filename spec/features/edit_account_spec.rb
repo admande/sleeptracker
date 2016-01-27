@@ -31,7 +31,6 @@ So that I may change it
       click_button 'Update'
 
       expect(page).to have_content("Your account has been updated successfully")
-      expect(page).to have_content("Welcome, Jon")
     end
   end
 end
