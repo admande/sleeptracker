@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require jquery.purr
+//= require highcharts/highcharts.js
 //= require_tree .
 //= require best_in_place
 

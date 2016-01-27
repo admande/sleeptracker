@@ -1,2 +1,3 @@
 $('#sleeplog-form').slideUp(350);
 $('#sleeplogs-content').append("<%= j (render @sleeplog) %>");
+barHighChart(<%= raw(@dates) %>, <%= @hours %>);
