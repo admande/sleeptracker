@@ -31,13 +31,14 @@ $backdrop : #C9D6AE;
   font-size: 80px;
   color: white;
   margin-left: 10px;
-  word-wrap: break-word;
+  width: 560px;
 }
 
 #welcome-description {
   font-size: 24px;
   color: white;
   margin-left: 10px;
+  width: 600px;
 }
 
 #app-info {
@@ -48,4 +49,5 @@ $backdrop : #C9D6AE;
   background: rgba(204, 204, 204, 0.7);
   opacity: 0;
   border-radius: 2%;
+  width: 560px;
 }

@@ -16,10 +16,10 @@
     .welcome
       = render 'layouts/navbar'
       = link_to new_user_session_path do
-        #welcome-title.small-11.columns Welcome to InsomniApp
-        .small-offset-1.columns#welcome-description A Cognitive-Behavioral Therapy Tool to Help You Sleep
-        .row
-          .small-6.columns#app-info
+        .small-12.medium-6.columns
+          #welcome-title Welcome to InsomniApp
+          #welcome-description A Cognitive-Behavioral Therapy Tool to Help You Sleep
+          #app-info
             %p Cognitive-Behavioral Therapy is a technique that has been used to treat depression, anxiety and, lately, insomnia. CBT recognizes that our thoughts, emotions and behaviors interact in ways that can negatively or positively reinforce each other. InsomniApp was designed with those techniques in mind to help users sleep better at night.
             %p InsomniApp allows you to positively affect your thoughts and mood by writing in the app's diary and recording your to-do lists. It also allows you to set reminders for better behavior, such as when to have your last cup of coffee for day. Finally, it allows you to track your sleep and see your improvement.
   - else
