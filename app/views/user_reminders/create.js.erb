@@ -1,2 +1,8 @@
-$('#user_reminder_id_' + '<%= @reminder.id %>' ).slideUp(350);
-$('#reminder_id_' + '<%= @reminder.id %>' ).addClass('set_reminder');
+<% if flash[:alert] %>
+  $(".flashes").show();
+  $(".flashes").html("<%= j flash[:alert] %>");
+<% else %>
+  $(".flashes").hide();
+  $('#user_reminder_id_' + '<%= @reminder.id %>' ).slideUp(350);
+  $('#reminder_id_' + '<%= @reminder.id %>' ).addClass('set_reminder');
+<% end %>

@@ -32,7 +32,6 @@ class SleeplogsController < ApplicationController
         format.html do
           flash[:notice] = "Sleeplog added successfully"
         end
-
         format.js do
           @sleeplogs = Sleeplog.where(user: current_user).order(date: :asc)
           @dates = @sleeplogs.pluck(:date).to_json
@@ -40,14 +39,14 @@ class SleeplogsController < ApplicationController
         end
       else
         format.html do
-          flash.now[:errors] = @sleeplog.errors.full_messages.join(". ")
+          flash[:alert] = @sleeplog.errors.full_messages.join(". ")
           render :new
         end
-
         format.js do
-          @sleeplogs = Sleeplog.where(user: @user).order(date: :asc)
+          @sleeplogs = Sleeplog.where(user: current_user).order(date: :asc)
           @dates = @sleeplogs.pluck(:date).to_json
           @hours = @sleeplogs.pluck(:hours).to_json
+          flash.now[:alert] = @sleeplog.errors.full_messages.join(". ")
         end
       end
     end
