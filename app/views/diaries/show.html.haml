@@ -5,3 +5,5 @@
     %p= "Sentiment: #{(@diary.sentiment*100).round}%"
   - else
     %button.sentiment_button= button_to "Calculate Sentiment", edit_diary_path(@diary), remote: true
+
+= link_to "Return to All Diaries", diaries_path

@@ -9,4 +9,13 @@
     .small-8.columns= text_field_tag :diary_body_search, params[:diary_body_search]
     .small-offset-1.small-3.columns.button= submit_tag "Diary Search", :name => nil, label: "Diary Search", id: "diary_search_button"
 .row
+  - if params[:order] == "date"
+    = link_to "Sort by Date", diaries_path(order: "reverse_date")
+  - else
+    = link_to "Sort by Date", diaries_path(order: "date")
+  - if params[:order] == "sentiment"
+    = link_to "Sort by Sentiment", diaries_path(order: "reverse_sentiment")
+  - else
+    = link_to "Sort by Sentiment", diaries_path(order: "sentiment")
+.row
   .small-11.small-offset-1.columns.diaries_content= render @diaries
