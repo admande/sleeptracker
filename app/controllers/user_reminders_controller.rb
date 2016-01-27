@@ -5,16 +5,21 @@ class UserRemindersController < ApplicationController
   def new
     @reminder = Reminder.find(params[:reminder_id])
     @user_reminder = UserReminder.new
+    flash[:alert] = nil
   end
 
   def create
     @reminder = Reminder.find(params[:reminder_id])
     @user_reminder = UserReminder.new(user_reminder_params)
     @user_reminder.user = current_user
-    if @user_reminder.save
-    else
-      flash.now[:errors] = @user_reminder.errors.full_messages.join(". ")
-      render :new
+    respond_to do |format|
+      if @user_reminder.save
+        format.html { redirect_to reminders_path, notice: "Reminder added successfully" }
+        format.js { flash[:alert] = nil }
+      else
+        format.html { }
+        format.js { flash.now[:alert] = @user_reminder.errors.full_messages.join(". ") }
+      end
     end
   end
 
