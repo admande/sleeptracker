@@ -14,16 +14,16 @@ feature 'user signs in', %{
   let!(:user) { FactoryGirl.create(:user) }
   let!(:sleeplogs) { FactoryGirl.create_list(:sleeplog, 30, user: user) }
 
-  context 'seeing sleeplogs' do
+  context 'seeing sleeplogs', js: true do
     before do
       visit root_path
-      sign_in_as(user)
-      click_link "Sleeplogs"
+      fill_in 'user_email', with: user.email
+      fill_in 'user_password', with: user.password
+      click_button 'SIGN IN'
     end
 
     scenario "user sees sleeplogs" do
       expect(page).to have_content("Sleeplogs")
-      expect(page).to have_content("Date")
       expect(page).to have_content("Hours")
     end
   end

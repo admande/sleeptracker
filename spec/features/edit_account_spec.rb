@@ -14,17 +14,19 @@ So that I may change it
 
   let!(:user) { FactoryGirl.create(:user) }
 
-  context 'updating profile' do
+  context 'updating profile', js: true do
     before do
       visit root_path
-      sign_in_as(user)
-      click_link 'Edit Account Details'
+      fill_in 'user_email', with: user.email
+      fill_in 'user_password', with: user.password
+      click_button 'SIGN IN'
+      visit edit_user_registration_path
     end
 
     scenario "user successfully edits name, email and password" do
       fill_in 'First Name', with: 'Jon'
       fill_in 'Last Name', with: 'Smith'
-      fill_in 'Email', with: 'jon@smith.com'
+      fill_in 'user_email', with: 'jon@smith.com'
       fill_in 'Current Password', with: user.password
       fill_in 'user_password', with: 'smithypassword'
       fill_in 'Password Confirmation', with: 'smithypassword'
