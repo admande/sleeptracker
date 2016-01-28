@@ -31,8 +31,10 @@ gem 'best_in_place'
 
 #sentiment analysis
 gem 'indico'
-
+#searching
 gem 'pg_search'
+
+
 
 #helping creating charts for sleeplog
 gem 'chartkick'
@@ -41,6 +43,8 @@ gem 'active_median'
 
 # sending user reminders
 gem 'twilio-ruby'
+gem 'sidekiq'
+gem 'nokogiri'
 # Use delayed job for running background jobs
 gem 'delayed_job_active_record'
 # Need daemons to start delayed_job
@@ -48,12 +52,6 @@ gem 'daemons'
 
 group :production do
   gem 'rails_12factor'
-end
-
-group :test do
-  gem 'coveralls', require: false
-  gem 'poltergeist'
-  gem 'database_cleaner'
 end
 
 group :development, :test do
@@ -66,13 +64,18 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
   gem 'faker'
-  gem 'selenium-webdriver'
+  gem 'coveralls', require: false
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'webmock'
+  gem 'vcr'
 end

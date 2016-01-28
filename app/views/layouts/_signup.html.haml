@@ -1,17 +1,17 @@
 = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = f.error_notification
   .row
-    = f.input :first_name, label: "First Name", required: true, autofocus: true, label: false, placeholder: "First Name"
+    = f.input :first_name, required: true, autofocus: true, label: false, placeholder: "First Name"
   .row
-    = f.input :last_name, label: "Last Name", required: true, autofocus: true, label: false, placeholder: "Last Name"
+    = f.input :last_name, required: true, autofocus: true, label: false, placeholder: "Last Name"
   .row
-    = f.input :phone, label: "Phone Number", required: true, autofocus: true, label: false, placeholder: "Phone Number"
+    = f.input :phone, required: true, autofocus: true, label: false, placeholder: "Phone Number"
   .row
     = f.input :email, required: true, autofocus: true, label: false, placeholder: "Email"
   .row
     = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: false, placeholder: "Password"
   .row
-    = f.input :password_confirmation, label: "Password Confirmation", required: true, label: false, placeholder: "Password Confirmation"
+    = f.input :password_confirmation, required: true, label: false, placeholder: "Password Confirmation"
   .row
     .inherit.button= f.submit "SIGN UP"
   .row
