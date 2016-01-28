@@ -12,8 +12,7 @@ $(document).ready(function() {
     event.preventDefault();
     $('#login-partial').hide();
     $('#signup-partial').show();
-;
-  })
+  });
 });
 
 $(document).ready(function() {
@@ -21,6 +20,5 @@ $(document).ready(function() {
     event.preventDefault();
     $('#login-partial').show();
     $('#signup-partial').hide();
-;
-  })
+  });
 });
