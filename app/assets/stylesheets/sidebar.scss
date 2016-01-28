@@ -1,32 +1,68 @@
-$purple         : #3D42C4;
-$purple-dark: scale-color($purple, $lightness: -30%);
-$purple-dark1: scale-color($purple, $lightness: -50%);
-$purple-dark2: scale-color($purple, $lightness: -65%);
-$purple-light: scale-color($purple, $lightness: +20%);
+$sidebar-blue: #071e26;
+$sidebar-blue-dark: scale-color($sidebar-blue, $lightness: -30%);
+$sidebar-blue-dark1: scale-color($sidebar-blue, $lightness: -50%);
+$sidebar-blue-dark2: scale-color($sidebar-blue, $lightness: -65%);
+$sidebar-blue-light: rgba(255, 255, 255, 0.1);
+$unhighlighted-gray: #999999;
+$logo-blue: #319dc5;
 
+.home_path {
+  padding: 30px;
+  font-size: 40px;
+  color: $logo-blue;
+}
 .sidebar {
-  background-color: $purple;
+  background-color: $sidebar-blue;
+  font-size: 30px;
+  height: 100%;
   padding: 0;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  width: 25%;
+}
+
+.bottom_bar {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+}
+.bottom_link {
+  width: 50%;
+  padding: 15px;
+  font-family: sans-serif;
   a {
     color: white;
-    }
+  }
 }
 
 .sidebar_links {
   padding: 10px;
-  padding-left: 30px
+  padding-left: 30px;
+  color: $unhighlighted-gray;
 }
 
 .sidebar_links:hover {
-  background-color: $purple-light;
+  background-color: $sidebar-blue-light;
+  color: white;
 }
 
 .sidebar_links:active {
-  background-color: $purple-dark;
+  background-color: $sidebar-blue-dark;
+  color: white;
 }
 
-.sidebar_links:current {
-  background-color: $purple-dark;
+
+.highlighted  {
+  background-color: $sidebar-blue-light;
+  color: white;
+  padding: 10px;
+  padding-left: 30px;
+  border-right: solid;
+  border-right-width: thick;
+  border-right-color: $logo-blue;
 }

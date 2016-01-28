@@ -1,9 +1,20 @@
 $(document).ready(function() {
-  $("#sleeplogs-links").on("click", "a", function(event) {
+  $("#log_link").on("click", "a", function(event) {
     event.preventDefault();
-    $("#sleeplogs-content").fadeToggle();
-  })
+    $("#container-1").hide();
+    $("#sleeplogs-content").show();
+  });
 })
+
+$(document).ready(function() {
+  $("#graph_link").on("click", "a", function(event) {
+    event.preventDefault();
+    $("#sleeplogs-content").hide();
+    $("#container-1").show();
+  });
+})
+
+
 
 var barHighChart = function(dates, hours) {
   $('#container-1').highcharts({

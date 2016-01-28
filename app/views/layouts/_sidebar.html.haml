@@ -1,9 +1,31 @@
 .sidebar.columns.small-12.medium-3.large-2
-  = link_to sleeplogs_path do
-    .sidebar_links Sleeplogs
-  = link_to todos_path do
-    .sidebar_links To-Dos
-  = link_to reminders_path do
-    .sidebar_links Reminders
-  = link_to diaries_path do
-    .sidebar_links Diaries
+  .text-center.home_path
+    = link_to root_path do
+      INSOMNIAPP
+  -if controller_name == "sleeplogs"
+    = link_to sleeplogs_path do
+      .highlighted SLEEPLOGS
+  -else
+    = link_to sleeplogs_path do
+      .sidebar_links SLEEPLOGS
+  -if controller_name == "todos"
+    = link_to todos_path do
+      .highlighted TO-DOS
+  -else
+    = link_to todos_path do
+      .sidebar_links TO-DOS
+  -if controller_name == "reminders"
+    = link_to reminders_path do
+      .highlighted REMINDERS
+  -else
+    = link_to reminders_path do
+      .sidebar_links REMINDERS
+  -if controller_name == "diaries"
+    = link_to diaries_path do
+      .highlighted DIARIES
+  -else
+    = link_to diaries_path do
+      .sidebar_links DIARIES
+  .bottom_bar
+    .bottom_link=link_to "SIGN OUT", destroy_user_session_path, method: :delete
+    .bottom_link=link_to "EDIT ACCOUNT", edit_user_registration_path
