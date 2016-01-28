@@ -1,23 +1,64 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$backdrop : #C9D6AE;
+$backdrop-black: rgba(0, 0, 0, 0.76);
+$label-blue: #008CBA;
 
 .welcome {
   background-image: image-url('skyscrapers.jpg');
+  background-position: bottom;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   min-height: 100%;
-  min-width: 1024px;
+  min-width: 66%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
+
+  #bottom_right_sign_up, #bottom_right_sign_in {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 25px;
+    font-size: 18px;
+  }
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+#partial {
+  width: 70%;
+}
 
 .top-bar {
   position-left: 0;
   position-right: 0;
   width: 100%;
+}
+
+#user_email, #user_password, #user_first_name, #user_last_name, #user_phone, #user_password_confirmation {
+  border-bottom: line;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  background-color: white;
+  font-size: 24px;
+  height: auto;
+}
+
+
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 .fullWidth {
@@ -27,27 +68,69 @@ $backdrop : #C9D6AE;
    width: 100%;
 }
 
+.inherit {
+  width: inherit;
+  margin-top: 30px;
+  padding: 6px;
+  input {
+    width: 100%;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+input[type='checkbox'] {
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border:2px solid gray;
+    margin: 0;
+    margin-right: 10px
+}
+input[type='checkbox']:checked {
+  background-color: $label-blue;
+}
+
+label.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
 #welcome-title {
-  color: white;
-  font-size: 80px;
-  margin-left: 10px;
-  width: 560px;
+  background-color: black;
+  color: #319dc5;
+  font-size: 56px;
+  font-weight: bold;
+  width: 55%;
 }
 
 #welcome-description {
+  background-color: black;
   color: white;
   font-size: 24px;
-  margin-left: 10px;
+  font-weight: bold;
+  margin-top: 20px;
   width: 600px;
 }
 
 #app-info {
-  background: rgba(204, 204, 204, 0.7);
-  border-radius: 2%;
-  color: black;
+  background: black;
+  color: white;
   font-size: 24px;
-  margin-top: 20px;
-  margin-left: 10px;
+  font-weight: lighter;
+  margin-top: 60px;
   opacity: 0;
-  width: 560px;
+  padding: 33px;
+  width: 600px;
+}
+
+#signup-partial {
+  display: none;
 }

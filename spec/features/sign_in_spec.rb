@@ -18,26 +18,26 @@ So that I can gain access to the app
   context 'signing in' do
     before do
       visit root_path
-      click_link 'Sign In'
     end
 
-    scenario "user signs in with valid email and password" do
-      fill_in 'Email', with: user.email
+    scenario "user signs in with valid email and password", js: true do
+      visit root_path
+      fill_in 'user_email', with: user.email
       fill_in 'user_password', with: user.password
-      click_button 'Log in'
+      click_button 'SIGN IN'
 
       expect(page).to have_content("Signed in successfully")
       expect(page).to have_content("Sign Out")
       expect(page).to_not have_content("Sign In")
     end
 
-    scenario "user signs in with wrong credentials" do
-      fill_in 'Email', with: 'carls@jr.com'
+    scenario "user signs in with wrong credentials", js: true do
+      fill_in 'user_email', with: 'carls@jr.com'
       fill_in 'user_password', with: 'password'
-      click_button 'Log in'
+      click_button 'SIGN IN'
 
       expect(page).to have_content("Invalid email or password")
-      expect(find_field("Email").value).to have_content("carls@jr.com")
+      expect(find_field("user_email").value).to have_content("carls@jr.com")
     end
   end
 end
