@@ -1,7 +1,7 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$backdrop-black : rgba(0, 0, 0, 0.76);
+$backdrop-black: rgba(0, 0, 0, 0.76);
 $label-blue: #008CBA;
 
 .welcome {
@@ -100,7 +100,7 @@ input[type='checkbox']:checked {
 label.checkbox {
   display: flex;
   align-items: center;
-  font-size: 18px
+  font-size: 18px;
 }
 
 #welcome-title {
@@ -124,7 +124,7 @@ label.checkbox {
   background: black;
   color: white;
   font-size: 24px;
-  font-weight: lighter;;
+  font-weight: lighter;
   margin-top: 60px;
   opacity: 0;
   padding: 33px;
