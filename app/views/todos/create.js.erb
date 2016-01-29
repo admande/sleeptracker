@@ -1,2 +1,2 @@
 $('#todo-form').slideUp(350);
-$('#todos-content').html("<%= j (render @todo) %>");
+$('#todos-content').prepend("<%= j (render @todo) %>");

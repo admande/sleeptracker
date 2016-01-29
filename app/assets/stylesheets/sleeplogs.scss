@@ -21,3 +21,20 @@ $logo-blue: #319dc5;
 .highlighted_sleeplogs {
   border-bottom-color: $logo-blue;
 }
+
+#add_sleeplog_link {
+  margin-top: 10px;
+ }
+
+#container-1 {
+  margin: 20px;
+}
+
+.sleeplog_table {
+  box-shadow: 1px 3px 1px #d7e4ed;
+  margin-bottom: 10px;
+}
+
+.date {
+  text-align: right;
+}
