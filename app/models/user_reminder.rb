@@ -10,13 +10,29 @@ class UserReminder < ActiveRecord::Base
   def send_user_reminder
     @twilio_number = ENV['TWILIO_NUMBER']
     @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
-    #time_str = ((self.time).localtime).strftime("%I:%M%p on %b. %d, %Y")
     reminder = "Hi #{self.user.first_name}. It's time to #{self.reminder.body.downcase}."
     message = @client.account.messages.create(
       from: @twilio_number,
       to: self.user.phone,
       body: reminder,
     )
-    puts message.to
+    message
+  end
+
+  def self.send_reminders
+    UserReminder.all.each do |user_reminder|
+      if user_reminder.has_not_been_sent_today && user_reminder.reminder_time_passed?
+        user_reminder.send_user_reminder
+        user_reminder.update(last_sent_at: Time.current)
+      end
+    end
+  end
+
+  def reminder_time_passed?
+    Time.current.utc.strftime( "%H%M%S%N" ) > time.utc.strftime( "%H%M%S%N" )
+  end
+
+  def has_not_been_sent_today
+    last_sent_at.blank? || !last_sent_at.today?
   end
 end
