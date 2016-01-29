@@ -31,7 +31,7 @@ So I can gain access to the app
       click_button 'SIGN UP'
 
       expect(page).to have_content("Welcome! You have signed up successfully.")
-      expect(page).to have_content("Sign Out")
+      expect(page).to have_content("SIGN OUT")
 
     end
 
@@ -39,7 +39,6 @@ So I can gain access to the app
       click_button 'SIGN UP'
 
       expect(page).to have_content("can't be blank")
-      expect(page).to_not have_content("Sign Out")
     end
 
     scenario 'a not valid email address is given', js: true do
@@ -55,7 +54,6 @@ So I can gain access to the app
 
       click_button 'SIGN UP'
       expect(page).to have_content("doesn't match")
-      expect(page).to_not have_content("Sign Out")
     end
 
     scenario 'user tries to register with already used password', js: true do
@@ -66,7 +64,7 @@ So I can gain access to the app
       fill_in 'user_password', with: 'password'
       fill_in 'Password Confirmation', with: 'password'
       click_button 'SIGN UP'
-      click_link 'Sign Out'
+      click_link 'SIGN OUT'
 
       visit root_path
       click_link "SIGN UP"
