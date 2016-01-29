@@ -17,4 +17,9 @@ FactoryGirl.define do
     user
     title 'Grocery Shopping'
   end
+
+  factory :reminder do
+    title "No more eating"
+    body "Certain foods, like those high in sugar, refined carbs, those that cause indigestion and MSG can affect your brain's neurotransmitters."
+  end
 end

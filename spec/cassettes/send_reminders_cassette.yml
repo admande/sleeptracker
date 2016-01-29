@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<TWILIO_ACCOUNT_SID>:<TWILIO_AUTH_TOKEN>@api.twilio.com/2010-04-01/Accounts/<TWILIO_ACCOUNT_SID>/Messages/SM19e38a9800bb43d9ac449f9d676623bc.json
+    body:
+      encoding: US-ASCII
+      string: Body=
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.9.0 (ruby/x86_64-darwin15 2.2.1-p85)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 29 Jan 2016 18:30:47 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.070'
+      Twilio-Request-Id:
+      - RQ5bafad683265458bacf6b535cf9cee4e
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '802'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM19e38a9800bb43d9ac449f9d676623bc", "date_created": "Fri,
+        29 Jan 2016 18:28:57 +0000", "date_updated": "Fri, 29 Jan 2016 18:28:57 +0000",
+        "date_sent": "Fri, 29 Jan 2016 18:28:57 +0000", "account_sid": "<TWILIO_ACCOUNT_SID>",
+        "to": "+17815885556", "from": "<TWILIO_NUMBER>", "messaging_service_sid":
+        null, "body": "", "status": "delivered", "num_segments": "2", "num_media":
+        "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": "-0.01500",
+        "price_unit": "USD", "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/<TWILIO_ACCOUNT_SID>/Messages/SM19e38a9800bb43d9ac449f9d676623bc.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/<TWILIO_ACCOUNT_SID>/Messages/SM19e38a9800bb43d9ac449f9d676623bc/Media.json"}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 18:30:47 GMT
+- request:
+    method: post
+    uri: https://<TWILIO_ACCOUNT_SID>:<TWILIO_AUTH_TOKEN>@api.twilio.com/2010-04-01/Accounts/<TWILIO_ACCOUNT_SID>/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B13393092599&To=7815885556&Body=Hi+Kyle.+It%27s+time+to+certain+foods%2C+like+those+high+in+sugar%2C+refined+carbs%2C+those+that+cause+indigestion+and+msg+can+affect+your+brain%27s+neurotransmitters..
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.9.0 (ruby/x86_64-darwin15 2.2.1-p85)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 29 Jan 2016 18:52:59 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.315'
+      Twilio-Request-Id:
+      - RQc67030c5be114ad589eb61f070a87138
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '960'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM71cb0d6b214a45c9b062a181cc17a441", "date_created": "Fri,
+        29 Jan 2016 18:52:59 +0000", "date_updated": "Fri, 29 Jan 2016 18:52:59 +0000",
+        "date_sent": null, "account_sid": "<TWILIO_ACCOUNT_SID>", "to": "+17815885556",
+        "from": "<TWILIO_NUMBER>", "messaging_service_sid": null, "body": "Sent from
+        your Twilio trial account - Hi Kyle. It''s time to certain foods, like those
+        high in sugar, refined carbs, those that cause indigestion and msg can affect
+        your brain''s neurotransmitters..", "status": "queued", "num_segments": "2",
+        "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01",
+        "price": null, "price_unit": "USD", "error_code": null, "error_message": null,
+        "uri": "/2010-04-01/Accounts/<TWILIO_ACCOUNT_SID>/Messages/SM71cb0d6b214a45c9b062a181cc17a441.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/<TWILIO_ACCOUNT_SID>/Messages/SM71cb0d6b214a45c9b062a181cc17a441/Media.json"}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 18:52:59 GMT
+recorded_with: VCR 3.0.1
