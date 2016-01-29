@@ -1,21 +1,20 @@
-.row
+.row.top_of_diaries
   .small-4.columns= link_to "Add New Diary", new_diary_path
   .small-8.columns= link_to "See All Diary Entries", diaries_path
-%br
 .row
   = form_tag(diaries_path, method: :get, id: "search-form") do
-    .small-8.columns= text_field_tag :diary_body_search, params[:diary_body_search]
-    .small-offset-1.small-3.columns.button= submit_tag "Diary Search", :name => nil, label: "Diary Search", id: "diary_search_button"
+    .small-8.columns= text_field_tag :diary_body_search, params[:diary_body_search], placeholder: "Search by Keywords"
+    -# .small-offset-1.small-3.columns.button= submit_tag "Diary Search", :name => nil, label: "Diary Search", id: "diary_search_button"
 .row
-  .small-offset-1.small-4.columns
+  .small-4.columns
     - if params[:order] == "date"
       = link_to "Sort by Date", diaries_path(order: "reverse_date")
     - else
       = link_to "Sort by Date", diaries_path(order: "date")
-  .small-offset-1.small-4.columns
+  .small-4.columns
     - if params[:order] == "sentiment"
       = link_to "Sort by Sentiment", diaries_path(order: "reverse_sentiment")
     - else
       = link_to "Sort by Sentiment", diaries_path(order: "sentiment")
 .row
-  .small-11.small-offset-1.columns.diaries_content= render @diaries
+  .small-11.columns.diaries_content= render @diaries

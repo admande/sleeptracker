@@ -9,6 +9,10 @@ $logo-blue: #319dc5;
   display: none;
 }
 
+.top_of_sleeplogs {
+  padding-top: 30px;
+}
+
 .sleeplogs_menu {
   border-bottom: solid;
   border-bottom-color: $unhighlighted-gray;
@@ -31,10 +35,33 @@ $logo-blue: #319dc5;
 }
 
 .sleeplog_table {
-  box-shadow: 1px 3px 1px #d7e4ed;
+  box-shadow: 2px 2px 4px 2px #d7e4ed;
   margin-bottom: 10px;
 }
 
 .date {
   text-align: right;
+  color: $unhighlighted-gray;
+}
+
+.hours {
+  color: $logo-blue;
+}
+
+.sleeplog_table {
+  padding: 20px;
+}
+
+.headers {
+  padding-bottom: 30px;
+  font-size: 22px;
+}
+
+.titles {
+  font-size: 16px;
+  color: $unhighlighted-gray;
+}
+
+.info {
+  font-size: 24px;
 }

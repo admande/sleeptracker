@@ -1,32 +1,30 @@
 .single_sleeplog
-  %table.sleeplog_table
-    %tr
-      %th= "#{sleeplog.hours} HOURS"
-      %th
-      %th
-      %th= "#{l sleeplog.date}"
-    %tr
-      %th WENT TO BED
-      %th FELL ASLEEP
-      %th WOKE UP
-      %th SLEEPING PILL
-    %tr
-    - if sleeplog.in_bed_time
-      %td= l sleeplog.in_bed_time
-    - else
-      %td --:--
-    - if sleeplog.fall_asleep_time
-      %td= l sleeplog.fall_asleep_time
-    - else
-      %td --:--
-    - if sleeplog.wake_up_time
-      %td= l sleeplog.wake_up_time
-    - else
-      %td --:--
-    - if sleeplog.sleeping_pill == true
-      %td YES
-    - else
-      %td NO
+  .sleeplog_table
+    .row.headers
+      .small-6.columns.hours= "#{sleeplog.hours} HOURS"
+      .small-6.columns.date= "#{l sleeplog.date}"
+    .row.titles
+      .small-3.columns WENT TO BED
+      .small-3.columns FELL ASLEEP
+      .small-3.columns WOKE UP
+      .small-3.columns SLEEPING PILL
+    .row.info
+      - if sleeplog.in_bed_time
+        .small-3.columns= l sleeplog.in_bed_time
+      - else
+        .small-3.columns --:--
+      - if sleeplog.fall_asleep_time
+        .small-3.columns= l sleeplog.fall_asleep_time
+      - else
+        .small-3.columns --:--
+      - if sleeplog.wake_up_time
+        .small-3.columns= l sleeplog.wake_up_time
+      - else
+        .small-3.columns --:--
+      - if sleeplog.sleeping_pill == true
+        .small-3.columns YES
+      - else
+        .small-3.columns NO
 
 
   -# - unless sleeplog.quality.blank?

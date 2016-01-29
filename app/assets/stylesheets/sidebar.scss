@@ -12,10 +12,12 @@ $logo-blue: #319dc5;
   color: $logo-blue;
 }
 .sidebar {
+  position: fixed;
   background-color: $sidebar-blue;
   font-size: 30px;
   height: 100%;
   padding: 0;
+  left: 0;
   width: 25%;
 }
 

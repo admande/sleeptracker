@@ -10,8 +10,6 @@
     = csrf_meta_tags
   %body
 
-
-
   - if controller_name == "welcome"
     .welcome.small-12.medium-6.columns
       #welcome-text
@@ -25,12 +23,12 @@
         #login-partial= render 'layouts/login'
         #signup-partial= render 'layouts/signup'
 
-
-
   - else
-    = render 'layouts/sidebar'
     .row
-      .flashes
-        %p.notice= notice
-        %p.alert= alert
-      .columns.small-12.medium-7.large-8= yield
+      .small-12.medium-3.large-3.columns
+        = render 'layouts/sidebar'
+      .small-12.medium-9.large-9.columns
+        .flashes
+          %p.notice= notice
+          %p.alert= alert
+        = yield
