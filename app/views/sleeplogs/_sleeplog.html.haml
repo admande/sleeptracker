@@ -3,7 +3,7 @@
     %tr
       %th= "#{sleeplog.hours} HOURS"
       %th
-      %th 
+      %th
       %th= "#{l sleeplog.date}"
     %tr
       %th WENT TO BED
@@ -12,15 +12,15 @@
       %th SLEEPING PILL
     %tr
     - if sleeplog.in_bed_time
-      %td= "#{l sleeplog.in_bed_time}"
+      %td= l sleeplog.in_bed_time
     - else
       %td --:--
     - if sleeplog.fall_asleep_time
-      %td= "#{l sleeplog.fall_asleep_time}"
+      %td= l sleeplog.fall_asleep_time
     - else
       %td --:--
     - if sleeplog.wake_up_time
-      %td= "#{l sleeplog.wake_up_time}"
+      %td= l sleeplog.wake_up_time
     - else
       %td --:--
     - if sleeplog.sleeping_pill == true
