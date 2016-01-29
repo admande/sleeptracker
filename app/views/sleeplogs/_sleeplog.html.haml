@@ -1,18 +1,39 @@
-.row
-  = "Date: #{l sleeplog.date}"
-  = "Hours #{sleeplog.hours}"
-  - unless sleeplog.quality.blank?
-    = "Quality: #{sleeplog.quality}"
-  - unless sleeplog.notes.blank?
-    = "Notes: #{sleeplog.notes}"
-  - if sleeplog.in_bed_time
-    = "Went to bed at #{l sleeplog.in_bed_time}"
-  - if sleeplog.fall_asleep_time
-    = "Fell asleep at #{l sleeplog.fall_asleep_time}"
-  - if sleeplog.wake_up_time
-    = "Woke up at #{l sleeplog.wake_up_time}"
-  - if sleeplog.sleeping_pill
-    = sleeplog.sleeping_pill
-  - if Diary.where(user: current_user, date: sleeplog.date).present?
-    - Diary.where(user: current_user, date: sleeplog.date).each_with_index do |diary, index|
-      %p= link_to "Diary sentiment: #{(diary.sentiment * 100).round}%", diary_path(diary)
+.single_sleeplog
+  %table.sleeplog_table
+    %tr
+      %th= "#{sleeplog.hours} HOURS"
+      %th
+      %th
+      %th= "#{l sleeplog.date}"
+    %tr
+      %th WENT TO BED
+      %th FELL ASLEEP
+      %th WOKE UP
+      %th SLEEPING PILL
+    %tr
+    - if sleeplog.in_bed_time
+      %td= l sleeplog.in_bed_time
+    - else
+      %td --:--
+    - if sleeplog.fall_asleep_time
+      %td= l sleeplog.fall_asleep_time
+    - else
+      %td --:--
+    - if sleeplog.wake_up_time
+      %td= l sleeplog.wake_up_time
+    - else
+      %td --:--
+    - if sleeplog.sleeping_pill == true
+      %td YES
+    - else
+      %td NO
+
+
+  -# - unless sleeplog.quality.blank?
+  -#   = "Quality: #{sleeplog.quality}"
+  -# - unless sleeplog.notes.blank?
+  -#   = "Notes: #{sleeplog.notes}"
+  -#
+  -# - if Diary.where(user: current_user, date: sleeplog.date).present?
+  -#   - Diary.where(user: current_user, date: sleeplog.date).each_with_index do |diary, index|
+  -#     %p= link_to "Diary sentiment: #{(diary.sentiment * 100).round}%", diary_path(diary)

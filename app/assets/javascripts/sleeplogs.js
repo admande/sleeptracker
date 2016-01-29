@@ -1,24 +1,48 @@
+
+
 $(document).ready(function() {
-  $("#sleeplogs-links").on("click", "a", function(event) {
+  $("#log_link").on("click", "a", function(event) {
     event.preventDefault();
-    $("#sleeplogs-content").fadeToggle();
-  })
+    $("#container-1").hide();
+    $("#sleeplogs-content").show();
+  });
 })
+
+$(document).ready(function() {
+  $("#graph_link").on("click", "a", function(event) {
+    event.preventDefault();
+    $("#sleeplogs-content").hide();
+    $("#container-1").show();
+  });
+})
+
+Highcharts.theme = {
+  colors: ["#319dc5"],
+  font: "Helvetica Neue",
+}
+
+var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
 
 var barHighChart = function(dates, hours) {
   $('#container-1').highcharts({
+    title: {
+      text: ''
+    },
     chart: {
-      type: 'column'
+      type: 'column',
+
     },
     legend: {
       enabled: false
     },
     xAxis: {
-      categories: dates
+      categories: dates,
+      title: {
+        text: 'Dates'}
     },
     yAxis: {
       title: {
-        text: 'Hours Slept'
+        text: 'Hours'
       }
     },
     rangeSelector: {

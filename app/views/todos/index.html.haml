@@ -1,6 +1,4 @@
 .row
-  %h1.small-11.small-offset-1.columns To-Dos
-.row
   %h3.small-11.small-offset-1.columns#todos= link_to "Add To-Do", new_todo_path, remote: true
   .small-11.small-offset-1.columns#todo-form
   .small-11.small-offset-1.columns#todos-content= render @todos

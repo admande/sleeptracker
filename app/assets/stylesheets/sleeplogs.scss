@@ -1,7 +1,40 @@
+$unhighlighted-gray: #999999;
+$logo-blue: #319dc5;
+
 #sleeplogs-content {
   display: none;
 }
 
 #sleeplog-form {
   display: none;
+}
+
+.sleeplogs_menu {
+  border-bottom: solid;
+  border-bottom-color: $unhighlighted-gray;
+  a {
+    font-size: 30px;
+    color: $unhighlighted-gray;
+  }
+}
+
+.highlighted_sleeplogs {
+  border-bottom-color: $logo-blue;
+}
+
+#add_sleeplog_link {
+  margin-top: 10px;
+ }
+
+#container-1 {
+  margin: 20px;
+}
+
+.sleeplog_table {
+  box-shadow: 1px 3px 1px #d7e4ed;
+  margin-bottom: 10px;
+}
+
+.date {
+  text-align: right;
 }

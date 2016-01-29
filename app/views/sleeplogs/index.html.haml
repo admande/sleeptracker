@@ -1,12 +1,14 @@
 .row
-  %h1.small-11.small-offset-1.columns Sleeplogs
+  .text-center.sleeplogs_menu.small-2.small-offset-1.columns#graph_link= link_to "GRAPH", "#"
+  .text-center.sleeplogs_menu.small-2.small-offset-1.columns#log_link= link_to "LOG", "#"
+  .small-1.columns
+.row
+  .small-11.small-offset-1.columns#add_sleeplog_link= link_to "ADD SLEEPLOG", new_sleeplog_path, remote: true
 .row
   .small-11.small-offset-1.columns#container-1
 .row
-  .small-11.small-offset-1.columns#sleeplogs= link_to "Add Sleeplog", new_sleeplog_path, remote: true
-.row
   .small-11.small-offset-1.columns#sleeplog-form
+
 .row
-  .small-11.small-offset-1.columns#sleeplogs-links= link_to "Show Sleeplogs"
-.row
-  .small-11.small-offset-1.columns#sleeplogs-content= render @sleeplogs
+  .small-11.small-offset-1.columns#sleeplogs-content
+    = render @sleeplogs

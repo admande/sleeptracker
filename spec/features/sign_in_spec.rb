@@ -27,7 +27,7 @@ So that I can gain access to the app
       click_button 'SIGN IN'
 
       expect(page).to have_content("Signed in successfully")
-      expect(page).to have_content("Sign Out")
+      expect(page).to have_content("SIGN OUT")
       expect(page).to_not have_content("Sign In")
     end
 
