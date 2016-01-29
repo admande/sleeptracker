@@ -23,7 +23,7 @@ feature 'user signs in', %{
     end
 
     scenario "user sees sleeplogs" do
-      expect(page).to have_content("Sleeplogs")
+      expect(page).to have_content("Dates")
       expect(page).to have_content("Hours")
     end
   end

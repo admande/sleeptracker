@@ -28,5 +28,10 @@
 
 
   - else
+    = render 'layouts/navbar'
     = render 'layouts/sidebar'
-    .columns.small-12.medium-9= yield
+    .row
+      .flashes
+        %p.notice= notice
+        %p.alert= alert
+      .columns.small-12.medium-7.large-8= yield
