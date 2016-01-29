@@ -21,7 +21,7 @@ class UserReminder < ActiveRecord::Base
 
   def self.send_reminders
     UserReminder.all.each do |user_reminder|
-      if user_reminder.has_not_been_sent_today && user_reminder.reminder_time_passed?
+      if user_reminder.has_not_been_sent_today? && user_reminder.reminder_time_passed?
         user_reminder.send_user_reminder
         user_reminder.update(last_sent_at: Time.current)
       end
@@ -32,7 +32,7 @@ class UserReminder < ActiveRecord::Base
     Time.current.utc.strftime( "%H%M%S%N" ) > time.utc.strftime( "%H%M%S%N" )
   end
 
-  def has_not_been_sent_today
+  def has_not_been_sent_today?
     last_sent_at.blank? || !last_sent_at.today?
   end
 end
