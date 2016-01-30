@@ -26,7 +26,6 @@ So that I can gain access to the app
       fill_in 'user_password', with: user.password
       click_button 'SIGN IN'
 
-      expect(page).to have_content("Signed in successfully")
       expect(page).to have_content("SIGN OUT")
       expect(page).to_not have_content("Sign In")
     end
