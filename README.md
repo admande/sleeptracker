@@ -1,6 +1,6 @@
 ![Build Status](https://codeship.com/projects/15960290-9b0e-0133-0f5a-1eba7eda5a8f/status?branch=master)
-![Code Climate](https://codeclimate.com/github/admande/sleeptracker.png)
-![Coverage Status](https://coveralls.io/repos/admande/sleeptracker/badge.png)
+<!-- ![Code Climate](https://codeclimate.com/github/admande/sleeptracker.png)
+![Coverage Status](https://coveralls.io/repos/admande/sleeptracker/badge.png) -->
 
 == README
 
