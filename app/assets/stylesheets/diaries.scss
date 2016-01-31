@@ -1,10 +1,28 @@
+
+
 .single_diary {
   box-shadow: 1px 3px 1px #d7e4ed;
-  margin-bottom: 10px;
   padding: 10px;
-  width: 40%;
+  width: 67%;
+  margin-right: 0;
+}
+
+.sort_div, .search_div, .diaries_stuff {
+  width: 67%
+}
+
+.sentiment_sort, .all_diaries {
+  float: right;
+}
+
+.diary_body {
+  margin-bottom: 0px;
 }
 
 .top_of_diaries {
   padding-top: 30px;
+}
+
+.mood {
+  float: right;
 }

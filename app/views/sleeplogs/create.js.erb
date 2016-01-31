@@ -1,4 +1,4 @@
-$('#sleeplog-form').slideUp(350);
+$('#myModal').foundation('reveal', 'close');
 $('#sleeplogs-content').append("<%= j (render @sleeplog) %>");
 barHighChart(<%= raw(@dates) %>, <%= @hours %>);
 $(".flashes").html("<%= j flash[:alert] %>");

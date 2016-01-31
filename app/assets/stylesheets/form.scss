@@ -1,5 +1,7 @@
 $font-family-sans-serif: "Ek Mukta", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
+
+
 .date.required.form-control{
 display: inline-block;
 width: 32%;
@@ -11,11 +13,49 @@ form {
     display: inline-block;
     width: auto;
     margin-right: 5px;
+    border-radius: 0px;
   }
+}
+
+#sleeplog_in_bed_time {
+  width: 140px;
+}
+
+#sleeplog_fall_asleep_time {
+  @extend #sleeplog_in_bed_time;
+}
+
+#sleeplog_wake_up_time {
+  @extend #sleeplog_in_bed_time;
+}
+
+#sleeplog_date {
+  @extend #sleeplog_in_bed_time;
+}
+
+#sleeplog_hours {
+  @extend #sleeplog_in_bed_time;
+}
+
+#sleeplog_quality {
+  @extend #sleeplog_in_bed_time;
+}
+
+#user_reminder_time {
+  @extend #sleeplog_in_bed_time;
+}
+
+#sleeplog_notes {
+  width: 80%;
 }
 
 .button {
   padding: 0px;
+}
+
+#sleeplog_button {
+  float: right;
+  margin-right: 20px
 }
 
 .button {
