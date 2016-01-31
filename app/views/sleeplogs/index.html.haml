@@ -2,8 +2,16 @@
   .text-center.sleeplogs_menu.small-2.small-offset-1.columns#graph_link= link_to "GRAPH", "#"
   .text-center.sleeplogs_menu.small-2.small-offset-1.columns#log_link= link_to "LOG", "#"
   .small-1.columns
+%br
 .row
-  .small-11.small-offset-1.columns#add_sleeplog_link= link_to "ADD SLEEPLOG", new_sleeplog_path, remote: true
+  %a.small-offset-1.columns{"data-reveal-id" => "myModal", :href => "#"} ADD A NEW SLEEPLOG
+
+
+#myModal.reveal-modal{"aria-hidden" => "true", "aria-labelledby" => "modalTitle", "data-reveal" => "", :role => "dialog"}
+  = render 'new'
+  %a.close-reveal-modal{"aria-label" => "Close"} &#215;
+
+
 .row
   .small-11.small-offset-1.columns#container-1
 .row

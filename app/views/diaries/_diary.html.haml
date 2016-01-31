@@ -1,5 +1,5 @@
-.single_diary.row
+.single_diary
   = link_to diary_path(diary) do
     = l diary.date
-    = truncate(diary.body, length: 80)
-    = "Mood: #{(diary.sentiment * 100).round}%"
+    .mood= "Mood: #{(diary.sentiment * 100).round}%"
+    %p.diary_body= truncate(diary.body, length: 80)
