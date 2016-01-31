@@ -1,7 +1,8 @@
-= simple_form_for @diary do |f|
+= simple_form_for Diary.new, remote: true do |f|
   .row
-    .small-11.small-offset-1.columns= f.date_field :date, value: Date.today
+    = f.label "DATE"
+    = f.date_field :date, value: Date.today
   .row
-    .small-11.small-offset-1.columns= f.input :body
+    .diary_form_body= f.input :body, label: false
   .row
-    .small-11.small-offset-1.columns.button= f.submit
+    .button#sleeplog_button= f.submit
