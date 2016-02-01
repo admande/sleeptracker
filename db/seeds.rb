@@ -9,7 +9,8 @@ user = User.create(
 
 Sleeplog.create(
   date: "2016-01-16",
-  hours: "6",
+  hours: "7",
+  quality: "Great",
   user_id: user.id
 )
 Sleeplog.create(
@@ -23,6 +24,30 @@ Sleeplog.create(
   hours: "7",
   user_id: user.id
 )
+
+Sleeplog.create(
+  date: "2016-01-13",
+  hours: "6",
+  user_id: user.id
+)
+Sleeplog.create(
+  date: "2016-01-12",
+  hours: "5",
+  user_id: user.id
+)
+
+Sleeplog.create(
+  date: "2016-01-11",
+  hours: "5",
+  user_id: user.id
+)
+
+Sleeplog.create(
+  date: "2016-01-10",
+  hours: "4",
+  user_id: user.id
+)
+
 
 Todo.create(
   title: "Sign up Billy for daycare",

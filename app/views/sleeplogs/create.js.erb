@@ -1,4 +1,4 @@
 $('#myModal').foundation('reveal', 'close');
-$('#sleeplogs-content').append("<%= j (render @sleeplog) %>");
+$('#sleeplogs-content').prepend("<%= j (render @sleeplog) %>");
 barHighChart(<%= raw(@dates) %>, <%= @hours %>);
 $(".flashes").html("<%= j flash[:alert] %>");

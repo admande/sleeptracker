@@ -16,9 +16,10 @@ $(document).ready(function() {
   });
 })
 
+
 Highcharts.theme = {
   colors: ["#319dc5"],
-  font: "Helvetica Neue",
+  font: "Montserrat",
 }
 
 var highchartsOptions = Highcharts.setOptions(Highcharts.theme);

@@ -43,27 +43,41 @@ $logo-blue: #319dc5;
 }
 
 .sidebar_links {
-  padding: 10px;
-  padding-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 60px;
   color: $unhighlighted-gray;
+  background-repeat: no-repeat;
+  justify-content: center;
+  background-size: 10%;
+  background-position: 5%;
+  :active {
+    background-color: $sidebar-blue-dark;
+    color: white;
+  }
 }
 
-.sidebar_links:hover {
-  background-color: $sidebar-blue-light;
-  color: white;
+#sidebar_sleeplog {
+  background-image: url('sleeplog.png');
 }
 
-.sidebar_links:active {
-  background-color: $sidebar-blue-dark;
-  color: white;
+#sidebar_todo {
+  background-image: url('todo.png');
 }
 
+#sidebar_reminder {
+  background-image: url('reminder.png');
+}
+
+#sidebar_diary {
+  background-image: url('diary.png');
+}
 
 .highlighted  {
+  @extend .sidebar_links;
   background-color: $sidebar-blue-light;
   color: white;
-  padding: 10px;
-  padding-left: 30px;
   border-right: solid;
   border-right-width: thick;
   border-right-color: $logo-blue;

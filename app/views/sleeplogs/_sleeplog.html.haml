@@ -1,4 +1,4 @@
-.single_sleeplog
+.single_sleeplog{ id: "sleeplog_id_#{sleeplog.id}" }
   .sleeplog_table
     .row.headers
       .small-6.columns.hours= "#{sleeplog.hours} HOURS"
@@ -26,12 +26,12 @@
       - else
         .small-3.columns NO
 
+    .extra_info
+      - unless sleeplog.quality.blank?
+        = "Quality: #{sleeplog.quality}"
+      - unless sleeplog.notes.blank?
+        = "Notes: #{sleeplog.notes}"
 
-  -# - unless sleeplog.quality.blank?
-  -#   = "Quality: #{sleeplog.quality}"
-  -# - unless sleeplog.notes.blank?
-  -#   = "Notes: #{sleeplog.notes}"
-  -#
-  -# - if Diary.where(user: current_user, date: sleeplog.date).present?
-  -#   - Diary.where(user: current_user, date: sleeplog.date).each_with_index do |diary, index|
-  -#     %p= link_to "Diary sentiment: #{(diary.sentiment * 100).round}%", diary_path(diary)
+      - if Diary.where(user: current_user, date: sleeplog.date).present?
+        - Diary.where(user: current_user, date: sleeplog.date).each_with_index do |diary, index|
+          %p= link_to "Diary entry mood: #{(diary.sentiment * 100).round}%", diary_path(diary)

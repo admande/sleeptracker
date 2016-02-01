@@ -4,9 +4,7 @@
 $backdrop-black: rgba(0, 0, 0, 0.76);
 $label-blue: #008CBA;
 
-.home_path {
-  width: auto;
-}
+
 .welcome {
   background-image: image-url('skyscrapers.jpg');
   background-position: bottom;
@@ -29,6 +27,10 @@ $label-blue: #008CBA;
     padding: 25px;
     font-size: 18px;
   }
+
+.sign_up_button {
+  margin-top: 10px;
+}
 
 .login {
   display: flex;
@@ -111,7 +113,8 @@ label.checkbox {
   color: #319dc5;
   font-size: 56px;
   font-weight: bold;
-  width: 55%;
+  width: inherit;
+  padding: 10px;
 }
 
 #welcome-description {
@@ -121,6 +124,7 @@ label.checkbox {
   font-weight: bold;
   margin-top: 20px;
   width: 600px;
+  padding: 10px;
 }
 
 #app-info {

@@ -2,4 +2,4 @@
   %h3.to_do_item= best_in_place todo, :title
   - if todo.due
     = l todo.due
-  .delete_todo= link_to "Delete To-Do", todo, remote: true, method: :delete
+  %p.delete_todo= link_to "Delete To-Do", todo, remote: true, method: :delete

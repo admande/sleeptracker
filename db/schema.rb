@@ -41,8 +41,6 @@ ActiveRecord::Schema.define(version: 20160129180946) do
     t.boolean "sleeping_pill"
   end
 
-  add_index "sleeplogs", ["date"], name: "index_sleeplogs_on_date", unique: true, using: :btree
-
   create_table "todos", force: :cascade do |t|
     t.string   "title",      null: false
     t.integer  "user_id",    null: false

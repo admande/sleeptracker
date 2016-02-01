@@ -29,8 +29,6 @@ class DiariesController < ApplicationController
     @diary = Diary.new(diary_params)
     @diary.user = current_user
     if @diary.save
-      flash[:notice] = "Diary added successfully"
-      redirect_to '/diaries'
     else
       flash.now[:errors] = @diary.errors.full_messages.join(". ")
       render :new
@@ -45,6 +43,10 @@ class DiariesController < ApplicationController
   end
 
   def destroy
+    @diary = Diary.find(params[:id])
+    @diary.destroy
+
+    redirect_to diaries_path
   end
 
   private

@@ -4,28 +4,28 @@
       INSOMNIAPP
   - if controller_name == "sleeplogs"
     = link_to sleeplogs_path do
-      .highlighted SLEEPLOGS
+      #sidebar_sleeplog.highlighted SLEEPLOGS
   - else
     = link_to sleeplogs_path do
-      .sidebar_links SLEEPLOGS
+      #sidebar_sleeplog.sidebar_links SLEEPLOGS
   - if controller_name == "todos"
     = link_to todos_path do
-      .highlighted TO-DOS
+      #sidebar_todo.highlighted TO-DOS
   - else
     = link_to todos_path do
-      .sidebar_links TO-DOS
+      #sidebar_todo.sidebar_links TO-DOS
   - if controller_name == "reminders"
     = link_to reminders_path do
-      .highlighted REMINDERS
+      #sidebar_reminder.highlighted REMINDERS
   - else
     = link_to reminders_path do
-      .sidebar_links REMINDERS
+      #sidebar_reminder.sidebar_links REMINDERS
   - if controller_name == "diaries"
     = link_to diaries_path do
-      .highlighted DIARIES
+      #sidebar_diary.highlighted DIARIES
   - else
     = link_to diaries_path do
-      .sidebar_links DIARIES
+      #sidebar_diary.sidebar_links DIARIES
   .bottom_bar
     .bottom_link= link_to "SIGN OUT", destroy_user_session_path, method: :delete
     .bottom_link= link_to "EDIT ACCOUNT", edit_user_registration_path
