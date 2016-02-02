@@ -14,19 +14,19 @@ Insomniapp Login Screen
 
 Insomniapp Sleeplog Graph built with HighCharts
 
-![Insomniapp Sleeplog Graph](https://www.dropbox.com/s/ojgfe88b69ru6ff/insomniapp%20sleeplog%20graph.png?dl=0)
+![Insomniapp Sleeplog Graph](app/assets/images/insomniapp_graph.png?raw=true)
 
 Insomniapp Sleeplogs
-![Insomniapp Sleeplogs](https://www.dropbox.com/s/fa08jsze6jyhptr/insomniapp%20logs.png?dl=0)
+![Insomniapp Sleeplogs](app/assets/images/insomniapp_logs.png?raw=true)
 
 Insomniapp New Sleeplog Modal
-![Insomniapp New Sleeplog](https://www.dropbox.com/s/241nvul95tyatlo/insomniapp%20new%20sleeplog.png?dl=0)
+![Insomniapp New Sleeplog](app/assets/images/insomniapp_newsleeplog.png?raw=true)
 
 Insomniapp Reminders using Twilio API
-![Insomniapp Reminders](https://www.dropbox.com/s/jrosh3s1b06oc61/insomniapp%20reminders.png?dl=0)
+![Insomniapp Reminders](app/assets/images/insomniapp_reminders.png?raw=true)
 
 Insomniapp Diaries using Indico API
-![Insomniapp Diaries](https://www.dropbox.com/s/c9lonfuk02ejcgv/insomniapp%20diaries.png?dl=0)
+![Insomniapp Diaries](app/assets/images/insomniapp_diaries.png?raw=true)
 
 Insomniapp To-Dos
-![Insomniapp To- Dos](https://www.dropbox.com/s/ms7kv7828pfhc7k/insomniapp%20to-dos.png?dl=0)
+![Insomniapp To- Dos](app/assets/images/insomniapp_to-dos.png?raw=true)
