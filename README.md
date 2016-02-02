@@ -10,7 +10,7 @@ On the technical side, Insomniapp uses a couple of APIs and plenty of JavaScript
 
 Insomniapp Login Screen
 
-![Insomniapp Login](https://www.dropbox.com/s/jibmm5rfyf5s9n7/insomniapp%20login%20page.png?dl=0)
+![Insomniapp Login](/images/insomniapp_login.png)
 
 Insomniapp Sleeplog Graph built with HighCharts
 
