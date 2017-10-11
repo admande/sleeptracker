@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.1"
+ruby "2.3.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
@@ -75,7 +75,6 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner'
   gem 'webmock'
   gem 'vcr'
 end

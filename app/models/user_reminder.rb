@@ -23,7 +23,7 @@ class UserReminder < ActiveRecord::Base
     UserReminder.all.each do |user_reminder|
       if user_reminder.has_not_been_sent_today? && user_reminder.reminder_time_passed?
         user_reminder.send_user_reminder
-        user_reminder.update(last_sent_at: Time.current)
+        user_reminder.update_attributes(last_sent_at: Time.current)
       end
     end
   end
