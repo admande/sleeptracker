@@ -6,6 +6,6 @@ class ChangeTimeColumnInUserReminders < ActiveRecord::Migration
 
   def down
     remove_column :user_reminders, :time
-    add_column :user_reminders, :time, :time, null: false
+    add_column :user_reminders, :time, :time
   end
 end
