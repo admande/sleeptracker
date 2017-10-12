@@ -1,0 +1,20 @@
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/oily_png-1.2.1/ext/oily_png
+/Users/adam.mandeville/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20171012-33079-s83qm5.rb extconf.rb
+creating Makefile
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/oily_png-1.2.1/ext/oily_png
+make "DESTDIR=" clean
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/oily_png-1.2.1/ext/oily_png
+make "DESTDIR="
+compiling color.c
+compiling oily_png_ext.c
+compiling operations.c
+compiling png_decoding.c
+compiling png_encoding.c
+compiling resampling.c
+linking shared-object oily_png/oily_png.bundle
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/oily_png-1.2.1/ext/oily_png
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 oily_png.bundle ./.gem.20171012-33079-1ml2s5s/oily_png

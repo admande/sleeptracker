@@ -1,0 +1,15 @@
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/adam.mandeville/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20171012-33079-5dyqcx.rb extconf.rb
+creating Makefile
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20171012-33079-6i3ibd

@@ -1,0 +1,13 @@
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/json-1.8.6/ext/json
+/Users/adam.mandeville/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20171012-33079-wkvq7m.rb extconf.rb
+creating Makefile
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/adam.mandeville/sleeptracker/vendor/bundle/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
