@@ -29,7 +29,7 @@ class UserReminder < ActiveRecord::Base
   end
 
   def reminder_time_passed?
-    Time.current.utc.strftime( "%H%M%S%N" ) > time.utc.strftime( "%H%M%S%N" )
+    (Time.current.utc - time.utc) < 10
   end
 
   def has_not_been_sent_today?
