@@ -29,7 +29,8 @@ class UserReminder < ActiveRecord::Base
   end
 
   def reminder_time_passed?
-    (Time.current.utc - time.utc) < 10
+    time_function = Time.current.utc - time.utc
+    0 < time_function && time_fuction < 10
   end
 
   def has_not_been_sent_today?
