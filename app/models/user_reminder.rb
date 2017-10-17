@@ -14,7 +14,7 @@ class UserReminder < ActiveRecord::Base
     message = @client.api.account.messages.create(
       from: @twilio_number,
       to: self.user.phone,
-      body: reminder,
+      body: reminder
     )
     message
   end
