@@ -35,7 +35,7 @@ So that I can gain access to the app
       fill_in 'user_password', with: 'password'
       click_button 'SIGN IN'
 
-      expect(page).to have_content("Invalid email or password")
+      expect(page).to have_content("Invalid Email or password")
       expect(find_field("user_email").value).to have_content("carls@jr.com")
     end
   end
