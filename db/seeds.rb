@@ -87,17 +87,17 @@ Reminder.create(
 
 Reminder.create(
   title: "Fill out your diary",
-  body: "Write down your thoughts from the day so that you're not thinking about them at night."
+  body: "Write down your thoughts from the day so that you're not thinking about them at night. myinsomniapp.herokuapp.com/diaries"
 )
 
 Reminder.create(
   title: "Record your sleep",
-  body: "Write down how much you slept last night so that you can track your progress. Don't stress if you didn't sleep 7 or 8 hours!"
+  body: "Write down how much you slept last night so that you can track your progress. Don't stress if you didn't sleep 7 or 8 hours! myinsomniapp.herokuapp.com/sleeplogs"
 )
 
 Reminder.create(
   title: "Write down your to-dos",
-  body: "There's only so much you can do in one day, very little you can do at night, so write down what you have to do for tomorrow and get it out of your mind!"
+  body: "There's only so much you can do in one day, very little you can do at night, so write down what you have to do for tomorrow and get it out of your mind! myinsomniapp.herokuapp.com/todos"
 )
 
 Reminder.create(
