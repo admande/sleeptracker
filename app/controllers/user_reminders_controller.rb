@@ -9,6 +9,7 @@ class UserRemindersController < ApplicationController
   end
 
   def create
+    byebug
     @reminder = Reminder.find(params[:reminder_id])
     @user_reminder = UserReminder.new(user_reminder_params)
     @user_reminder.user = current_user
